@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WayUp - O Sistema de Direção Diária Rumo à Sua Aprovação no ENEM</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Domine o ENEM sem ansiedade, sem confusão e sem perder tempo. O WayUp organiza sua rotina de estudos com um mapa de direção diária inteligente e adaptativo.">
+  <meta name="keywords" content="ENEM, cronograma enem, estudos enem, aprovação enem, plano de estudos enem, direção diária, cursinho online, simulado enem">
+  <meta name="author" content="WayUp">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wayupenem.com.br/">
+  <meta property="og:title" content="WayUp - Sistema de Direção Diária para o ENEM">
+  <meta property="og:description" content="Esqueça cronogramas estáticos em PDF. Tenha um mapa diário inteligente que se adapta à sua rotina e te guia até a vaga na faculdade.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=WayUp+ENEM">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://wayupenem.com.br/">
+  <meta property="twitter:title" content="WayUp - Sistema de Direção Diária para o ENEM">
+  <meta property="twitter:description" content="Esqueça cronogramas estáticos em PDF. Tenha um mapa diário inteligente que se adapta à sua rotina e te guia até a vaga na faculdade.">
+  <meta property="twitter:image" content="https://via.placeholder.com/1200x630?text=WayUp+ENEM">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons for premium UI icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#hero" class="logo-link" id="logo-header">
+        <div class="logo-wrapper">
+          <svg viewBox="0 0 40 40" width="32" height="32" style="display: inline-block; margin-right: 8px;" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="32" height="32" rx="6" fill="none" stroke="#dcae55" stroke-width="2"/>
+            <path d="M12 20 L20 28 L28 12" stroke="#00ff66" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="logo-text">Way<span class="highlight">Up</span></span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#como-funciona" class="nav-item">O que Resolve</a>
+        <a href="#metodologia" class="nav-item">Metodologia</a>
+        <a href="#depoimentos" class="nav-item">Aprovados</a>
+        <a href="#faq" class="nav-item">Dúvidas</a>
+        <a href="#planos" class="nav-item">Planos</a>
+      </nav>
+      <div class="header-actions">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-container">
+        
+        <h1 class="hero-title" id="hero-title">
+          Talvez você esteja estudando para o ENEM do <span class="text-gradient">jeito errado...</span>
+        </h1>
+        
+        <p class="hero-subtitle" id="hero-subtitle">
+          A WayUp cria um plano personalizado que diz exatamente o que estudar hoje, quando revisar cada conteúdo e como manter tudo fresco na memória até o dia da prova.
+        </p>
+
+        <div class="system-status-indicator">
+          <span class="pulse-dot"></span> Sistema de direção diária
+        </div>
+        
+        <!-- Interactive App Dashboard Mockup -->
+        <div class="dashboard-mockup-wrapper" id="dashboard-mockup-wrapper">
+          <div class="mockup-header-bar">
+            <div class="window-dots">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+            </div>
+          </div>
+          
+          <div class="app-container">
+            <!-- App Sidebar -->
+            <aside class="app-sidebar">
+              <div class="app-logo">
+                <!-- SVG Inline logo -->
+                <svg width="32" height="32" viewBox="0 0 100 100">
+                  <rect width="100" height="100" rx="28" fill="#083c27" />
+                  <path d="M 28 68 L 40 42 L 50 52 L 60 42 L 72 68" fill="none" stroke="#dcae55" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="50" cy="32" r="5" fill="#dcae55" />
+                </svg>
+                <span class="app-logo-text">Way<span class="gold">Up</span></span>
+              </div>
+              
+              <nav class="sidebar-menu">
+                <button class="menu-item active" data-tab="hoje">
+                  <i data-lucide="home"></i> Hoje
+                </button>
+                <button class="menu-item" data-tab="jornada">
+                  <i data-lucide="milestone"></i> Minha Jornada
+                </button>
+                <button class="menu-item" data-tab="evolucao">
+                  <i data-lucide="trending-up"></i> Evolução
+                </button>
+                <button class="menu-item" data-tab="revisoes">
+                  <i data-lucide="rotate-ccw"></i> Revisões
+                </button>
+                <button class="menu-item" data-tab="biblioteca">
+                  <i data-lucide="book-open"></i> Biblioteca
+                </button>
+                <button class="menu-item" data-tab="reta-final">
+                  <i data-lucide="zap"></i> Reta Final ENEM
+                </button>
+                <button class="menu-item" data-tab="suporte">
+                  <i data-lucide="help-circle"></i> Suporte
+                </button>
+              </nav>
+              
+              <div class="sidebar-profile">
+                <div class="profile-info">
+                  <div class="profile-name">Miguel</div>
+                  <div class="profile-email">miguel••••@gmail.com</div>
+                </div>
+                <button class="btn-new-plan" id="btn-trigger-simulator">
+                  <i data-lucide="refresh-cw"></i> Gerar novo plano
+                </button>
+              </div>
+            </aside>
+            
+            <!-- App Main Area -->
+            <div class="app-main">
+              <!-- App Topbar -->
+              <header class="app-topbar">
+                <div class="topbar-stats">
+                  <div class="stat-item">
+                    <i data-lucide="calendar"></i>
+                    <div>
+                      <span class="stat-label">FALTAM</span>
+                      <span class="stat-value" id="app-days-left">130 dias</span>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <i data-lucide="target"></i>
+                    <div>
+                      <span class="stat-label">OBJETIVO</span>
+                      <span class="stat-value" id="app-target-course">Outro curso</span>
+                    </div>
+                  </div>
+                  <div class="stat-item status-rhythm">
+                    <span class="rhythm-dot"></span>
+                    <span class="stat-value">No ritmo</span>
+                  </div>
+                </div>
+                
+                <div class="topbar-right">
+                  <span class="enem-date">ENEM • 8 E 15 NOV</span>
+                  <div class="notification-bell">
+                    <i data-lucide="bell"></i>
+                    <span class="bell-badge">1</span>
+                  </div>
+                </div>
+              </header>
+              
+              <!-- App Content Container -->
+              <div class="app-content-viewport">
+                <!-- TAB: Hoje (Active by Default) -->
+                <div class="tab-content active" id="tab-hoje">
+                  <div class="app-greeting">
+                    <span class="date-badge">
+                      <i data-lucide="sun"></i> BOM DIA, MIGUEL • QUARTA-FEIRA, 1 DE JULHO
+                    </span>
+                    <h2 class="app-main-title">Você está mais perto da aprovação hoje.</h2>
+                  </div>
+                  
+                  <!-- Metrics Card Grid -->
+                  <div class="app-metrics-card">
+                    <div class="metric-column">
+                      <span class="card-label">OBJETIVO FINAL</span>
+                      <span class="card-value" id="card-obj-val">Outro curso</span>
+                      <span class="card-desc">Sua meta de aprovação</span>
+                    </div>
+                    <div class="metric-column border-left">
+                      <span class="card-label">DIAS RESTANTES</span>
+                      <span class="card-value" id="card-days-val">130</span>
+                      <span class="card-desc">ENEM - 8 e 15 de novembro</span>
+                    </div>
+                    <div class="metric-column border-left">
+                      <span class="card-label">SEMANA ATUAL</span>
+                      <span class="card-value" id="card-week-val">1 de 19</span>
+                      <span class="card-desc">Sua jornada</span>
+                    </div>
+                    <div class="metric-column border-left">
+                      <span class="card-label">PREPARAÇÃO</span>
+                      <span class="card-value" id="card-prep-val">1%</span>
+                      <span class="card-desc">Nível Iniciante</span>
+                    </div>
+                    <div class="metric-column border-left">
+                      <span class="card-label">SEQUÊNCIA</span>
+                      <span class="card-value" id="card-streak-val">0</span>
+                      <span class="card-desc">Sua sequência começa hoje</span>
+                    </div>
+                  </div>
+                  
+                  <!-- Dynamic Section Rows -->
+                  <div class="app-rows-grid">
+                    <!-- Assistente do Dia -->
+                    <div class="app-card card-assistente">
+                      <div class="card-header-row">
+                        <div class="card-header-title">
+                          <i data-lucide="shield-check" class="green-text"></i>
+                          ASSISTENTE DO DIA
+                        </div>
+                        <span class="alert-count">Alertas de Hoje • 1</span>
+                      </div>
+                      
+                      <div class="task-box">
+                        <div class="task-icon-wrapper">
+                          <i data-lucide="target" class="pink-text"></i>
+                        </div>
+                        <div class="task-details">
+                          <span class="task-tag">MARCO</span>
+                          <h4 class="task-title" id="task-title-text">Próximo marco</h4>
+                          <p class="task-desc" id="task-desc-text">Faltam apenas 3 conteúdos para alcançar seu próximo nível: Básico.</p>
+                        </div>
+                        <button class="btn-action-task" id="btn-complete-task">
+                          Continuar jornada <i data-lucide="arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <!-- Preparação para o ENEM -->
+                    <div class="app-card card-preparacao">
+                      <div class="card-header-title">
+                        <i data-lucide="trending-up"></i> PREPARAÇÃO PARA O ENEM
+                      </div>
+                      <div class="prep-progress-wrapper">
+                        <div class="progress-big-number" id="progress-big-val">1%</div>
+                        <p class="progress-subtext" id="progress-sub-desc">Você está 1% mais perto da aprovação.</p>
+                        <div class="progress-bar-bg">
+                          <div class="progress-bar-fill" id="progress-fill-bar" style="width: 1%"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TAB: Minha Jornada -->
+                <div class="tab-content" id="tab-jornada">
+                  <h3 class="tab-section-title">Minha Jornada de Estudos</h3>
+                  <p class="tab-section-desc">Esta é a sua trilha personalizada de conteúdos organizada por peso de incidência no ENEM e grau de dificuldade.</p>
+                  
+                  <div class="timeline-container">
+                    <div class="timeline-step completed">
+                      <div class="step-icon"><i data-lucide="check"></i></div>
+                      <div class="step-content">
+                        <h4>Módulo Inicial: Nivelamento</h4>
+                        <p>Matemática Básica, Interpretação de Texto e Introdução à Redação.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-step current">
+                      <div class="step-icon"><i data-lucide="play"></i></div>
+                      <div class="step-content">
+                        <h4>Módulo 2: Conteúdos de Maior Incidência</h4>
+                        <p>Funções, Ecologia, República Velha e Coesão Textual.</p>
+                        <span class="badge-status">Em andamento</span>
+                      </div>
+                    </div>
+                    <div class="timeline-step locked">
+                      <div class="step-icon"><i data-lucide="lock"></i></div>
+                      <div class="step-content">
+                        <h4>Módulo 3: Consolidação e Aprofundamento</h4>
+                        <p>Física Térmica, Química Orgânica, Análise Combinatória e Estrutura de Redação Avançada.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-step locked">
+                      <div class="step-icon"><i data-lucide="lock"></i></div>
+                      <div class="step-content">
+                        <h4>Módulo 4: Reta Final & Simulações</h4>
+                        <p>Revisão geral, 5 simulados completos oficiais ENEM e estratégia de prova.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TAB: Evolução -->
+                <div class="tab-content" id="tab-evolucao">
+                  <h3 class="tab-section-title">Minha Evolução Acadêmica</h3>
+                  <p class="tab-section-desc">Acompanhe seu desempenho por área do conhecimento e veja sua nota preditiva no TRI subir.</p>
+                  
+                  <div class="evolution-grid">
+                    <div class="evolution-card">
+                      <span class="area-title">Matemática e suas Tecnologias</span>
+                      <div class="bar-evolution-wrapper">
+                        <div class="bar-label">Desempenho nos simulados: 710 pontos</div>
+                        <div class="bar-container"><div class="bar-indicator" style="width: 71%"></div></div>
+                      </div>
+                    </div>
+                    <div class="evolution-card">
+                      <span class="area-title">Ciências da Natureza</span>
+                      <div class="bar-evolution-wrapper">
+                        <div class="bar-label">Desempenho nos simulados: 630 pontos</div>
+                        <div class="bar-container"><div class="bar-indicator" style="width: 63%"></div></div>
+                      </div>
+                    </div>
+                    <div class="evolution-card">
+                      <span class="area-title">Linguagens e Códigos</span>
+                      <div class="bar-evolution-wrapper">
+                        <div class="bar-label">Desempenho nos simulados: 680 pontos</div>
+                        <div class="bar-container"><div class="bar-indicator" style="width: 68%"></div></div>
+                      </div>
+                    </div>
+                    <div class="evolution-card">
+                      <span class="area-title">Ciências Humanas</span>
+                      <div class="bar-evolution-wrapper">
+                        <div class="bar-label">Desempenho nos simulados: 720 pontos</div>
+                        <div class="bar-container"><div class="bar-indicator" style="width: 72%"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TAB: Outras Abas (Placeholder Simplificado) -->
+                <div class="tab-content" id="tab-generic">
+                  <h3 class="tab-section-title" id="generic-tab-title">Seção do App</h3>
+                  <div class="tab-generic-body">
+                    <i data-lucide="sparkles" class="generic-icon"></i>
+                    <p id="generic-tab-desc">Esta funcionalidade completa está ativa na sua conta de estudante pós-inscrição.</p>
+                    <a href="#planos" class="btn btn-secondary">Quero Acesso Completo</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Floating Support Button inside App Preview -->
+              <div class="app-support-btn">
+                <i data-lucide="message-square"></i> Suporte
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- The Pain Points / Problem Section -->
+    <section class="problem-section" id="como-funciona">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Você não precisa estudar mais. <span class="text-danger">Precisa estudar na direção certa.</span></h2>
+          <p class="section-subtitle">Enquanto muitos estudantes perdem tempo tentando decidir o que estudar, a WayUp elimina essa dúvida e mostra exatamente qual é o próximo passo até o ENEM</p>
+        </div>
+        
+        <div class="problem-grid">
+          <!-- Problem LED Card 1 -->
+          <div class="led-card prob-led-card" id="prob-card-1">
+            <div class="led-card-glow"></div>
+            <div class="led-card-inner prob-card-inner">
+              <div class="problem-icon"><i data-lucide="alert-octagon"></i></div>
+              <h3>📚 Matérias acumuladas</h3>
+              <p>Basta perder um dia para o cronograma inteiro sair do controle.</p>
+            </div>
+          </div>
+          
+          <!-- Problem LED Card 2 -->
+          <div class="led-card prob-led-card" id="prob-card-2">
+            <div class="led-card-glow"></div>
+            <div class="led-card-inner prob-card-inner">
+              <div class="problem-icon"><i data-lucide="clock"></i></div>
+              <h3>⏰ Horas desperdiçadas</h3>
+              <p>Você perde tempo decidindo o que estudar em vez de realmente estudar.</p>
+            </div>
+          </div>
+          
+          <!-- Problem LED Card 3 -->
+          <div class="led-card prob-led-card" id="prob-card-3">
+            <div class="led-card-glow"></div>
+            <div class="led-card-inner prob-card-inner">
+              <div class="problem-icon"><i data-lucide="brain-circuit"></i></div>
+              <h3>🧠 Dá branco na prova</h3>
+              <p>Sem revisões no momento certo, o cérebro esquece o conteúdo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works (Steps) Section -->
+    <section class="features-detail-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Imagine abrir a WayUp e já saber exatamente o que fazer hoje</h2>
+          <p class="section-subtitle">Pare de decidir matérias, montar cronogramas ou lembrar quando revisar. A WayUp organiza tudo para você.</p>
+        </div>
+        
+        <div class="led-cards-grid">
+          <!-- Card 1: O que estudar -->
+          <div class="led-card" id="led-card-1">
+            <div class="led-card-glow"></div>
+            <div class="led-card-inner">
+              <div class="led-card-icon">
+                <span class="led-emoji">📚</span>
+                <div class="led-icon-ring"></div>
+              </div>
+              <h3 class="led-card-title">O que estudar</h3>
+              <p class="led-card-desc">Nunca mais fique perdido escolhendo matérias. A WayUp define o caminho certo para você todo dia.</p>
+              <div class="led-card-badge">Direção diária automática</div>
+            </div>
+          </div>
+
+          <!-- Card 2: Quando revisar -->
+          <div class="led-card" id="led-card-2">
+            <div class="led-card-glow"></div>
+            <div class="led-card-inner">
+              <div class="led-card-icon">
+                <span class="led-emoji">🧠</span>
+                <div class="led-icon-ring"></div>
+              </div>
+              <h3 class="led-card-title">Quando revisar</h3>
+              <p class="led-card-desc">A WayUp avisa exatamente quando revisar para evitar esquecimentos, no momento certo que seu cérebro precisa.</p>
+              <div class="led-card-badge">Curva do esquecimento</div>
+            </div>
+          </div>
+
+          <!-- Card 3: O que priorizar -->
+          <div class="led-card" id="led-card-3">
+            <div class="led-card-glow"></div>
+            <div class="led-card-inner">
+              <div class="led-card-icon">
+                <span class="led-emoji">🎯</span>
+                <div class="led-icon-ring"></div>
+              </div>
+              <h3 class="led-card-title">O que priorizar</h3>
+              <p class="led-card-desc">Seu tempo vai para os conteúdos com maior impacto na sua nota. Zero desperdício, máximo resultado.</p>
+              <div class="led-card-badge">Foco inteligente</div>
+            </div>
+          </div>
+
+          <!-- Card 4: Seu progresso -->
+          <div class="led-card" id="led-card-4">
+            <div class="led-card-glow"></div>
+            <div class="led-card-inner">
+              <div class="led-card-icon">
+                <span class="led-emoji">📈</span>
+                <div class="led-icon-ring"></div>
+              </div>
+              <h3 class="led-card-title">Seu progresso</h3>
+              <p class="led-card-desc">Veja exatamente quanto já avançou até o ENEM. Cada dia de estudo reflete na sua barra de aprovação.</p>
+              <div class="led-card-badge">Evolução em tempo real</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works Step-by-Step Section -->
+    <section class="how-section" id="como-funciona-steps">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="how-badge"><i data-lucide="zap"></i> Simples assim</div>
+          <h2 class="section-title">Como funciona?</h2>
+          <p class="section-subtitle">Em menos de 2 minutos você configura tudo. O resto, a WayUp faz por você.</p>
+        </div>
+
+        <div class="how-steps-wrapper">
+          <!-- Step 1 -->
+          <div class="how-step">
+            <div class="how-step-number">01</div>
+            <div class="how-step-content">
+              <div class="how-step-icon-wrap">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="how-step-text">
+                <h3>Receba seu link de acesso</h3>
+                <p>Após a confirmação, você recebe um e-mail com seu link exclusivo de acesso à plataforma WayUp. Sem downloads, sem instalações — funciona direto no navegador.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="how-step-connector"><span></span></div>
+
+          <!-- Step 2 -->
+          <div class="how-step">
+            <div class="how-step-number">02</div>
+            <div class="how-step-content">
+              <div class="how-step-icon-wrap">
+                <i data-lucide="user-check"></i>
+              </div>
+              <div class="how-step-text">
+                <h3>Informe seu nome e curso objetivo</h3>
+                <p>Diga seu nome e qual curso está mirando — Medicina, Direito, Engenharia ou qualquer outro. Isso calibra os pesos das matérias exatamente para o que a sua universidade pede.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="how-step-connector"><span></span></div>
+
+          <!-- Step 3 -->
+          <div class="how-step">
+            <div class="how-step-number">03</div>
+            <div class="how-step-content">
+              <div class="how-step-icon-wrap">
+                <i data-lucide="clock-4"></i>
+              </div>
+              <div class="how-step-text">
+                <h3>Quantas horas você tem por semana?</h3>
+                <p>Informe sua disponibilidade real de estudo — pode ser 2 horas ou 8 horas por dia. O algoritmo monta um plano 100% possível de cumprir dentro da sua rotina, sem sobrecarga.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="how-step-connector"><span></span></div>
+
+          <!-- Step 4 -->
+          <div class="how-step">
+            <div class="how-step-number">04</div>
+            <div class="how-step-content">
+              <div class="how-step-icon-wrap how-step-icon-gold">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <div class="how-step-text">
+                <h3>Seu plano fica pronto em <span class="how-highlight">10 segundos</span></h3>
+                <p>Pronto. Tudo o que você precisa fazer é <strong>abrir e seguir</strong>. A WayUp te diz o que estudar hoje, o que revisar amanhã e como chegar ao ENEM com confiança.</p>
+                <div class="how-ready-badge">
+                  <i data-lucide="check-circle-2"></i>
+                  Plano gerado. Abra e siga.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mid-page Conversion CTA -->
+    <section class="mid-cta-section">
+      <div class="container text-center">
+        <p class="mid-cta-text">Já são <strong>+850 estudantes</strong> estudando com direção diária. Pare de perder tempo se organizando e comece agora.</p>
+        <a href="#planos" class="btn btn-primary btn-lg" id="btn-mid-cta">
+          Quero Minha Direção Diária <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Methodology Section (Scientific Proof) -->
+    <section class="methodology-section" id="metodologia">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title text-white">A Ciência por Trás da Direção WayUp</h2>
+          <p class="section-subtitle text-light">Esqueça a decoreba inútil. Focamos no que traz resultado com base em estudos de neurociência cognitiva.</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Recurso de Estudo</th>
+                <th class="danger-header">Estudo Tradicional</th>
+                <th class="gold-header">Sistema de Direção WayUp</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-title">Organização da Rotina</td>
+                <td>Você gasta até 3 horas semanais organizando o que estudar.</td>
+                <td class="success-cell"><i data-lucide="check"></i> Pronto em 5 segundos. O app faz tudo por você.</td>
+              </tr>
+              <tr>
+                <td class="feature-title">Imprevistos e Atrasos</td>
+                <td>Se você perde um dia, se sente culpado e desiste do plano todo.</td>
+                <td class="success-cell"><i data-lucide="check"></i> O algoritmo redistribui as matérias automaticamente.</td>
+              </tr>
+              <tr>
+                <td class="feature-title">Retenção de Conteúdo</td>
+                <td>Estudo passivo (vídeo + anotação). Esquece tudo em semanas.</td>
+                <td class="success-cell"><i data-lucide="check"></i> Revisão espaçada automatizada para fixação de longo prazo.</td>
+              </tr>
+              <tr>
+                <td class="feature-title">Controle de Ansiedade</td>
+                <td>Sensação constante de estar atrasado ou estudando errado.</td>
+                <td class="success-cell"><i data-lucide="check"></i> Clareza diária. Você deita a cabeça no travesseiro sabendo que cumpriu a meta ideal.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Social Proof Section -->
+    <section class="testimonials-section" id="depoimentos">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Quem usa WayUp já está com um pé na aprovação</h2>
+          <p class="section-subtitle">Comentários reais de estudantes que trocaram a ansiedade por direção clara, todos os dias.</p>
+        </div>
+      </div>
+
+      <!-- Auto-scrolling comments feed -->
+      <div class="t-marquee-wrapper">
+        <div class="t-marquee-track" id="testimonials-track">
+
+          <!-- T1 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar bg-gold">M</div>
+              <div class="t-info">
+                <h4>Mariana Santos <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Medicina (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">gente eu juro que já tinha desistido de fazer cronograma sozinha, sempre dava errado depois de 3 dias 😅 com o WayUp eu só abria o app e seguia, não tinha decisão pra tomar. quando saiu o resultado e vi que passei em Medicina eu chorei o dia inteiro</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 3 dias</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T2 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar bg-emerald">G</div>
+              <div class="t-info">
+                <h4>Gabriel Rezende <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Direito (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">trabalhava o dia todo e só sobrava a noite pra estudar, tava à beira do desespero. o app me dizia exatamente o que fazer naquele dia, sem enrolação. passei em Direito de primeira, ainda nem caiu a ficha</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">32 curtidas</span>
+            </div>
+          </div>
+
+          <!-- T3 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar bg-blue">A</div>
+              <div class="t-info">
+                <h4>Amanda Vieira <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Eng. Computação (ENEM 2024)</span>
+              </div>
+            </div>
+            <p class="t-msg">eu tinha pavor de matemática, evitava até abrir o caderno. o WayUp me dava só 15min por dia de exercício focado, nada mais que isso. no dia da prova resolvi tranquila e hoje ainda me pergunto como consegui</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 1 semana</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T4 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #ede9fe; color: #7c3aed;">L</div>
+              <div class="t-info">
+                <h4>Lucas Ferreira <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Administração (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">eu vivia ansioso, achando que tava estudando errado o tempo todo. depois que comecei a usar o WayUp essa sensação sumiu, o app dizia o que fazer e eu só fazia. se eu soubesse antes teria economizado tanta angústia</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">47 curtidas</span>
+            </div>
+          </div>
+
+          <!-- T5 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #e0f2fe; color: #0369a1;">J</div>
+              <div class="t-info">
+                <h4>Júlia Mendes <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Psicologia (ENEM 2024)</span>
+              </div>
+            </div>
+            <p class="t-msg">tentei cursinho presencial e não acompanhava o ritmo da turma, sempre me sentia atrasada. o WayUp se adaptou a mim, não o contrário. estudei bem menos do que imaginava e passei na primeira chamada 🙏</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 5 dias</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T6 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #fef3c7; color: #b45309;">R</div>
+              <div class="t-info">
+                <h4>Rafael Costa <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Engenharia Civil (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">o que mais me ajudou foi a revisão espaçada, física e química sempre escapavam da minha cabeça depois de um tempo. o app me avisava na hora certa de revisar. até hoje fico impressionado como isso funcionou</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">28 curtidas</span>
+            </div>
+          </div>
+
+          <!-- T7 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #d1fae5; color: #059669;">B</div>
+              <div class="t-info">
+                <h4>Beatriz Oliveira <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Nutrição (ENEM 2024)</span>
+              </div>
+            </div>
+            <p class="t-msg">minha dificuldade nunca foi estudar, era decidir o que estudar. perdia tanto tempo decidindo que no fim não sobrava tempo pra nada. o WayUp tirou essa decisão de mim e isso mudou tudo pra mim</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 2 dias</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T8 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #fee2e2; color: #dc2626;">T</div>
+              <div class="t-info">
+                <h4>Thiago Almeida <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Biomedicina (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">terceira vez fazendo ENEM, nas outras duas eu estudava sem direção nenhuma. dessa vez com o WayUp eu sabia exatamente onde estava e pra onde ia todos os dias. não teve milagre, teve direção</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">63 curtidas</span>
+            </div>
+          </div>
+
+          <!-- T9 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #ede9fe; color: #7c3aed;">C</div>
+              <div class="t-info">
+                <h4>Camila Rocha <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Letras (ENEM 2024)</span>
+              </div>
+            </div>
+            <p class="t-msg">sou super dispersa, nunca segui cronograma nenhum na vida. o WayUp é curto e direto, entro no app, vejo minha tarefa do dia e faço. em 4 meses minha confiança mudou completamente</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 6 dias</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T10 -->
+          <div class="t-card">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #ccfbf1; color: #0d9488;">V</div>
+              <div class="t-info">
+                <h4>Vinícius Prado <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Economia (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">confesso que duvidei que um app fosse resolver algo que cronograma em pdf nunca resolveu. em 5 meses saí de 580 pra 740 de média nos simulados. a diferença foi ter direção todo santo dia, não sorte</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">51 curtidas</span>
+            </div>
+          </div>
+
+          <!-- Duplicate set for a seamless infinite loop -->
+          <!-- T1-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar bg-gold">M</div>
+              <div class="t-info">
+                <h4>Mariana Santos <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Medicina (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">gente eu juro que já tinha desistido de fazer cronograma sozinha, sempre dava errado depois de 3 dias 😅 com o WayUp eu só abria o app e seguia, não tinha decisão pra tomar. quando saiu o resultado e vi que passei em Medicina eu chorei o dia inteiro</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 3 dias</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T2-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar bg-emerald">G</div>
+              <div class="t-info">
+                <h4>Gabriel Rezende <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Direito (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">trabalhava o dia todo e só sobrava a noite pra estudar, tava à beira do desespero. o app me dizia exatamente o que fazer naquele dia, sem enrolação. passei em Direito de primeira, ainda nem caiu a ficha</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">32 curtidas</span>
+            </div>
+          </div>
+
+          <!-- T3-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar bg-blue">A</div>
+              <div class="t-info">
+                <h4>Amanda Vieira <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Eng. Computação (ENEM 2024)</span>
+              </div>
+            </div>
+            <p class="t-msg">eu tinha pavor de matemática, evitava até abrir o caderno. o WayUp me dava só 15min por dia de exercício focado, nada mais que isso. no dia da prova resolvi tranquila e hoje ainda me pergunto como consegui</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 1 semana</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T4-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #ede9fe; color: #7c3aed;">L</div>
+              <div class="t-info">
+                <h4>Lucas Ferreira <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Administração (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">eu vivia ansioso, achando que tava estudando errado o tempo todo. depois que comecei a usar o WayUp essa sensação sumiu, o app dizia o que fazer e eu só fazia. se eu soubesse antes teria economizado tanta angústia</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">47 curtidas</span>
+            </div>
+          </div>
+
+          <!-- T5-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #e0f2fe; color: #0369a1;">J</div>
+              <div class="t-info">
+                <h4>Júlia Mendes <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Psicologia (ENEM 2024)</span>
+              </div>
+            </div>
+            <p class="t-msg">tentei cursinho presencial e não acompanhava o ritmo da turma, sempre me sentia atrasada. o WayUp se adaptou a mim, não o contrário. estudei bem menos do que imaginava e passei na primeira chamada 🙏</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 5 dias</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T6-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #fef3c7; color: #b45309;">R</div>
+              <div class="t-info">
+                <h4>Rafael Costa <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Engenharia Civil (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">o que mais me ajudou foi a revisão espaçada, física e química sempre escapavam da minha cabeça depois de um tempo. o app me avisava na hora certa de revisar. até hoje fico impressionado como isso funcionou</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">28 curtidas</span>
+            </div>
+          </div>
+
+          <!-- T7-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #d1fae5; color: #059669;">B</div>
+              <div class="t-info">
+                <h4>Beatriz Oliveira <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Nutrição (ENEM 2024)</span>
+              </div>
+            </div>
+            <p class="t-msg">minha dificuldade nunca foi estudar, era decidir o que estudar. perdia tanto tempo decidindo que no fim não sobrava tempo pra nada. o WayUp tirou essa decisão de mim e isso mudou tudo pra mim</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 2 dias</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T8-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #fee2e2; color: #dc2626;">T</div>
+              <div class="t-info">
+                <h4>Thiago Almeida <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Biomedicina (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">terceira vez fazendo ENEM, nas outras duas eu estudava sem direção nenhuma. dessa vez com o WayUp eu sabia exatamente onde estava e pra onde ia todos os dias. não teve milagre, teve direção</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">63 curtidas</span>
+            </div>
+          </div>
+
+          <!-- T9-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #ede9fe; color: #7c3aed;">C</div>
+              <div class="t-info">
+                <h4>Camila Rocha <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovada em Letras (ENEM 2024)</span>
+              </div>
+            </div>
+            <p class="t-msg">sou super dispersa, nunca segui cronograma nenhum na vida. o WayUp é curto e direto, entro no app, vejo minha tarefa do dia e faço. em 4 meses minha confiança mudou completamente</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
+              <span class="t-time">há 6 dias</span>
+              <i data-lucide="check-check" class="t-seen"></i>
+            </div>
+          </div>
+
+          <!-- T10-dup -->
+          <div class="t-card" aria-hidden="true">
+            <div class="t-card-header">
+              <div class="t-avatar" style="background: #ccfbf1; color: #0d9488;">V</div>
+              <div class="t-info">
+                <h4>Vinícius Prado <i data-lucide="badge-check" class="t-verified"></i></h4>
+                <span class="t-outcome">Aprovado em Economia (ENEM 2025)</span>
+              </div>
+            </div>
+            <p class="t-msg">confesso que duvidei que um app fosse resolver algo que cronograma em pdf nunca resolveu. em 5 meses saí de 580 pra 740 de média nos simulados. a diferença foi ter direção todo santo dia, não sorte</p>
+            <div class="t-meta">
+              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
+              <span class="t-time">51 curtidas</span>
+            </div>
+          </div>
+
+        </div><!-- /track -->
+      </div><!-- /marquee-wrapper -->
+    </section>
+
+    <!-- Pricing / Offer Section -->
+    <section class="pricing-section" id="planos">
+      <div class="pricing-bg-glow"></div>
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title text-white">Garanta sua vaga na faculdade hoje</h2>
+          <p class="section-subtitle text-light">Tenha acesso imediato a todo o sistema do WayUp e comece a direcionar seu futuro.</p>
+        </div>
+
+        <div class="pricing-card-container">
+          <div class="pricing-card featured">
+            <div class="badge-featured">Mais Vendido</div>
+            <h3 class="plan-name">Plano de Direção Anual - ENEM</h3>
+            <p class="plan-desc">Acesso completo à plataforma de direção diária inteligente com todas as atualizações.</p>
+            
+            <div class="plan-price-box">
+              <span class="price-original">De R$ 197,00</span>
+              <div class="price-main">
+                <span class="currency">R$</span>
+                <span class="value">54,90</span>
+              </div>
+              <span class="price-cash">pagamento único — acesso imediato</span>
+            </div>
+
+            <ul class="plan-features-list">
+              <li><i data-lucide="check"></i> <span><strong>Cronograma Inteligente e Adaptativo</strong></span></li>
+              <li><i data-lucide="check"></i> <span>Assistente do Dia com Metas Direcionadas</span></li>
+              <li><i data-lucide="check"></i> <span>Sistema de Revisão Espaçada Automatizado</span></li>
+              <li><i data-lucide="check"></i> <span>Dashboard de Evolução Completo por Área</span></li>
+              <li><i data-lucide="check"></i> <span>Suporte individualizado por WhatsApp</span></li>
+            </ul>
+
+            <div class="pricing-cta-wrapper">
+              <a href="https://go.perfectpay.com.br/PPU38CQDT8T" class="btn btn-primary btn-block btn-lg pulse" id="btn-purchase">
+                Quero Minha Aprovação Agora <i data-lucide="arrow-right"></i>
+              </a>
+              <p class="security-text"><i data-lucide="shield-check"></i> Pagamento 100% Seguro. Acesso imediato no e-mail.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guarantee Box -->
+        <div class="guarantee-box">
+          <div class="guarantee-icon">
+            <i data-lucide="shield-alert"></i>
+          </div>
+          <div class="guarantee-text">
+            <h3>Garantia Incondicional de 7 Dias</h3>
+            <p>Se em 7 dias você achar que o WayUp não é para você ou que não está ajudando nos seus estudos para o ENEM, basta enviar um único e-mail e devolvemos 100% do seu dinheiro. Sem perguntas, sem letrinhas miúdas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <p class="section-subtitle">Tire suas dúvidas antes de começar sua preparação inteligente.</p>
+        </div>
+
+        <div class="faq-accordion-wrapper">
+          <!-- Question 1 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Como eu recebo o acesso à ferramenta?</span>
+              <i data-lucide="chevron-down" class="faq-arrow"></i>
+            </button>
+            <div class="faq-content">
+              <p>Assim que o seu pagamento for aprovado, você receberá um e-mail automático contendo seus dados de acesso (login e senha) e o link para a tela de boas-vindas da ferramenta WayUp. Pagamentos via PIX ou Cartão de Crédito são aprovados em menos de 1 minuto.</p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Eu preciso baixar algum aplicativo no celular?</span>
+              <i data-lucide="chevron-down" class="faq-arrow"></i>
+            </button>
+            <div class="faq-content">
+              <p>O WayUp é uma aplicação web de última geração (PWA). Você não precisa gastar a memória do seu celular baixando apps pesados da PlayStore ou AppStore. Você pode acessar pelo celular, tablet ou computador e adicionar à tela inicial como um aplicativo normal com apenas um clique.</p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Consigo usar o WayUp mesmo tendo poucas horas de estudo?</span>
+              <i data-lucide="chevron-down" class="faq-arrow"></i>
+            </button>
+            <div class="faq-content">
+              <p>Sim! Na verdade, ele é ideal para quem tem pouco tempo. O nosso algoritmo prioriza os conteúdos que têm maior relevância e incidência no ENEM, eliminando matérias irrelevantes para garantir que você aproveite ao máximo cada minuto disponível.</p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>O cronograma se adapta se eu atrasar alguma matéria?</span>
+              <i data-lucide="chevron-down" class="faq-arrow"></i>
+            </button>
+            <div class="faq-content">
+              <p>Sim! A ferramenta recalcula e redistribui as matérias pendentes de forma equilibrada até o dia da prova para você não perder nada.</p>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>E se eu não gostar da ferramenta?</span>
+              <i data-lucide="chevron-down" class="faq-arrow"></i>
+            </button>
+            <div class="faq-content">
+              <p>Você tem 7 dias de garantia para testar o WayUp. Se durante esse período perceber que a ferramenta não atende às suas expectativas, basta solicitar o reembolso dentro do prazo previsto. Assim, você pode experimentar com tranquilidade e sem riscos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre-Footer Conversion Callout -->
+    <section class="conversion-callout">
+      <div class="container text-center">
+        <h2>A melhor hora para organizar seus estudos era ontem.</h2>
+        <p>A segunda melhor é agora.</p>
+        <a href="https://go.perfectpay.com.br/PPU38CQDT8T" class="btn btn-primary btn-lg pulse">
+          Garantir Meu Acesso ao WayUp <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-wrapper">
+            <svg viewBox="0 0 40 40" width="32" height="32" style="display: inline-block; margin-right: 8px;" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="32" height="32" rx="6" fill="none" stroke="#dcae55" stroke-width="2"/>
+              <path d="M12 20 L20 28 L28 12" stroke="#00ff66" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="logo-text text-white">Way<span class="highlight">Up</span></span>
+          </div>
+          <p>O sistema de direção diária inteligente que guia você até a vaga dos seus sonhos no ENEM.</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 WayUp ENEM. Todos os direitos reservados. Feito com foco na sua aprovação.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
