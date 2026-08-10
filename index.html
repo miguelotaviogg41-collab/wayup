@@ -1,1126 +1,795 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1530986971737492');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1530986971737492&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WayUp - O Sistema de Direção Diária Rumo à Sua Aprovação no ENEM</title>
+  <title>WayUp - O Sistema de Direção Diária para o ENEM | Garanta Sua Aprovação</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Domine o ENEM sem ansiedade, sem confusão e sem perder tempo. O WayUp organiza sua rotina de estudos com um mapa de direção diária inteligente e adaptativo.">
-  <meta name="keywords" content="ENEM, cronograma enem, estudos enem, aprovação enem, plano de estudos enem, direção diária, cursinho online, simulado enem">
+  <meta name="description" content="Domine o ENEM sem ansiedade e sem perder tempo. O WayUp é o sistema inteligente que calcula sua rotina diária de estudos e revisões ativas em segundos.">
+  <meta name="keywords" content="ENEM 2026, cronograma enem, estudos enem, direção diária enem, como passar no enem, aprovação medicina enem, revisões espaçadas enem">
   <meta name="author" content="WayUp">
   <meta name="robots" content="index, follow">
   
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wayupenem.com.br/">
-  <meta property="og:title" content="WayUp - Sistema de Direção Diária para o ENEM">
-  <meta property="og:description" content="Esqueça cronogramas estáticos em PDF. Tenha um mapa diário inteligente que se adapta à sua rotina e te guia até a vaga na faculdade.">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=WayUp+ENEM">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://wayupenem.com.br/">
-  <meta property="twitter:title" content="WayUp - Sistema de Direção Diária para o ENEM">
-  <meta property="twitter:description" content="Esqueça cronogramas estáticos em PDF. Tenha um mapa diário inteligente que se adapta à sua rotina e te guia até a vaga na faculdade.">
-  <meta property="twitter:image" content="https://via.placeholder.com/1200x630?text=WayUp+ENEM">
+  <meta property="og:title" content="WayUp - Sua aprovação no ENEM tem um mapa de direção.">
+  <meta property="og:description" content="Chega de se perder em cronogramas estáticos. Saiba exatamente o que estudar hoje, amanhã e até a prova.">
+  <meta property="og:image" content="assets/logo.svg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Stylesheets -->
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#000401',
+          },
+          fontFamily: {
+            headline: ['Outfit', 'Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- Lucide Icons for premium UI icons -->
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="bg-[#000401] text-slate-100 font-body antialiased selection:bg-emerald-500/30 selection:text-emerald-300">
 
-  <!-- Navigation Header -->
-  <header class="main-header">
-    <div class="header-container">
-      <a href="#hero" class="logo-link" id="logo-header">
-        <div class="logo-wrapper">
-          <svg viewBox="0 0 40 40" width="32" height="32" style="display: inline-block; margin-right: 8px;" xmlns="http://www.w3.org/2000/svg">
-            <rect x="4" y="4" width="32" height="32" rx="6" fill="none" stroke="#dcae55" stroke-width="2"/>
-            <path d="M12 20 L20 28 L28 12" stroke="#00ff66" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="logo-text">Way<span class="highlight">Up</span></span>
-        </div>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#como-funciona" class="nav-item">O que Resolve</a>
-        <a href="#metodologia" class="nav-item">Metodologia</a>
-        <a href="#depoimentos" class="nav-item">Aprovados</a>
-        <a href="#faq" class="nav-item">Dúvidas</a>
-        <a href="#planos" class="nav-item">Planos</a>
-      </nav>
-      <div class="header-actions">
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
+  <!-- Floating Glassmorphism Header -->
+  <div class="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none pt-4 px-4">
+    <div class="pointer-events-auto">
+      <header class="flex items-center gap-2 md:gap-4 bg-[#000401]/80 border border-white/10 backdrop-blur-xl py-1.5 px-3 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
+        <!-- Brand Logo Pill -->
+        <a href="#" class="flex items-center gap-2 px-3 py-1 text-white font-headline font-bold text-sm">
+          <img src="assets/logo.svg" alt="WayUp Logo" class="w-7 h-7 rounded-lg">
+          <span class="hidden sm:inline text-white">Way<span class="text-[#dcae55]">Up</span></span>
+        </a>
+        
+        <span class="h-4 border-l border-white/10 hidden sm:block"></span>
+
+        <!-- Nav Links -->
+        <nav class="flex items-center gap-1 md:gap-2 text-xs md:text-sm font-medium text-white/70" id="floating-nav">
+          <a href="#hero" class="nav-pill active px-3 py-1.5 rounded-full hover:text-white transition-all">Início</a>
+          <a href="#context" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all">Público</a>
+          <a href="#como-funciona" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all hidden md:inline">Como Funciona</a>
+          <a href="#modules" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all hidden lg:inline">O que Recebe</a>
+          <a href="#offer" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all">Inscrição</a>
+          <a href="#faq" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all">FAQ</a>
+        </nav>
+      </header>
     </div>
-  </header>
+  </div>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="hero-bg-glow"></div>
-      <div class="container hero-container">
+    <!-- HERO SECTION (Sem preço no início) -->
+    <section class="relative pt-32 md:pt-40 pb-20 overflow-hidden" id="hero">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.15)_0%,rgba(220,174,85,0.05)_40%,transparent_70%)] pointer-events-none z-0"></div>
+      
+      <div class="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
         
-        <h1 class="hero-title" id="hero-title">
-          Talvez você esteja estudando para o ENEM do <span class="text-gradient">jeito errado...</span>
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-300 text-xs md:text-sm font-medium mb-8 shadow-[0_0_20px_rgba(16,185,129,0.2)] animate-pulse">
+          <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400"></i>
+          <span>A Ferramenta Nº 1 de Direção Diária para o ENEM em 2026</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-emerald-400"></i>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-headline font-extrabold tracking-tight leading-[1.1] max-w-5xl mb-6 text-white">
+          Sua aprovação no ENEM não é sorte.<br class="hidden sm:inline"> É <span class="text-emerald-glow italic">direção diária.</span>
         </h1>
-        
-        <p class="hero-subtitle" id="hero-subtitle">
-          A WayUp cria um plano personalizado que diz exatamente o que estudar hoje, quando revisar cada conteúdo e como manter tudo fresco na memória até o dia da prova.
+
+        <p class="text-base md:text-xl text-slate-300/90 max-w-3xl mb-10 leading-relaxed font-body">
+          Chega de se sentir sufocado por cronogramas gigantescos de PDF que você nunca consegue seguir. O <strong class="text-white">WayUp</strong> calcula exatamente o que você deve estudar <span class="underline decoration-emerald-500 decoration-2 underline-offset-4">HOJE, amanhã e até a prova</span> — eliminando 100% da ansiedade e do tempo perdido.
         </p>
 
-        <div class="system-status-indicator">
-          <span class="pulse-dot"></span> Sistema de direção diária
+        <!-- CTA Principal (Sem preço) -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 mb-6 w-full sm:w-auto">
+          <a href="#offer" class="btn-glow-primary w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-lg font-bold text-black bg-gradient-to-r from-emerald-400 via-emerald-300 to-amber-300 hover:scale-105 transition-all shadow-[0_0_35px_rgba(16,185,129,0.5)]">
+            <span>Quero garantir minha vaga</span>
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
         </div>
-        
-        <!-- Interactive App Dashboard Mockup -->
-        <div class="dashboard-mockup-wrapper" id="dashboard-mockup-wrapper">
-          <div class="mockup-header-bar">
-            <div class="window-dots">
-              <span class="dot-red"></span>
-              <span class="dot-yellow"></span>
-              <span class="dot-green"></span>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs md:text-sm text-slate-400 mb-16">
+          <span class="flex items-center gap-1.5"><i data-lucide="zap" class="w-4 h-4 text-emerald-400"></i> Acesso Imediato no E-mail</span>
+          <span class="hidden sm:inline">•</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Garantia Incondicional de 7 Dias</span>
+          <span class="hidden sm:inline">•</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i> Suporte pelo WhatsApp</span>
+        </div>
+
+        <!-- DASHBOARD MOCKUP -->
+        <div class="w-full max-w-5xl rounded-3xl border border-white/10 bg-[#04110b]/90 p-2 md:p-4 shadow-[0_0_60px_rgba(16,185,129,0.15)] relative" id="dashboard-mockup-wrapper">
+          <div class="mockup-header-bar flex items-center justify-between px-4 py-2 border-b border-white/10 mb-2 text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
             </div>
+            <div class="font-mono text-emerald-400/80 text-[11px] flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              wayup.app/dashboard — Simulação Ao Vivo
+            </div>
+            <div class="text-slate-500 text-[11px] hidden sm:block">ENEM 2026 Mode</div>
           </div>
-          
-          <div class="app-container">
-            <!-- App Sidebar -->
-            <aside class="app-sidebar">
-              <div class="app-logo">
-                <!-- SVG Inline logo -->
-                <svg width="32" height="32" viewBox="0 0 100 100">
-                  <rect width="100" height="100" rx="28" fill="#083c27" />
-                  <path d="M 28 68 L 40 42 L 50 52 L 60 42 L 72 68" fill="none" stroke="#dcae55" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <circle cx="50" cy="32" r="5" fill="#dcae55" />
-                </svg>
-                <span class="app-logo-text">Way<span class="gold">Up</span></span>
+
+          <div class="app-container grid grid-cols-1 md:grid-cols-[220px_1fr] bg-[#f8faf7] text-slate-900 rounded-2xl overflow-hidden text-left min-h-[460px]">
+            <aside class="app-sidebar bg-white border-r border-slate-200 p-4 flex flex-col">
+              <div class="flex items-center gap-2 mb-6 px-2">
+                <img src="assets/logo.svg" alt="WayUp Logo" class="w-7 h-7 rounded-lg">
+                <span class="font-headline font-bold text-lg text-slate-900">Way<span class="text-[#b88628]">Up</span></span>
               </div>
               
-              <nav class="sidebar-menu">
-                <button class="menu-item active" data-tab="hoje">
-                  <i data-lucide="home"></i> Hoje
+              <nav class="sidebar-menu flex flex-col gap-1.5 flex-grow">
+                <button class="menu-item active flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold" data-tab="hoje">
+                  <i data-lucide="home" class="w-4 h-4"></i> Hoje
                 </button>
-                <button class="menu-item" data-tab="jornada">
-                  <i data-lucide="milestone"></i> Minha Jornada
+                <button class="menu-item flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-100" data-tab="jornada">
+                  <i data-lucide="milestone" class="w-4 h-4"></i> Minha Jornada
                 </button>
-                <button class="menu-item" data-tab="evolucao">
-                  <i data-lucide="trending-up"></i> Evolução
+                <button class="menu-item flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-100" data-tab="evolucao">
+                  <i data-lucide="trending-up" class="w-4 h-4"></i> Evolução TRI
                 </button>
-                <button class="menu-item" data-tab="revisoes">
-                  <i data-lucide="rotate-ccw"></i> Revisões
+                <button class="menu-item flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-100" data-tab="revisoes">
+                  <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Revisões Ativas
                 </button>
-                <button class="menu-item" data-tab="biblioteca">
-                  <i data-lucide="book-open"></i> Biblioteca
-                </button>
-                <button class="menu-item" data-tab="reta-final">
-                  <i data-lucide="zap"></i> Reta Final ENEM
-                </button>
-                <button class="menu-item" data-tab="suporte">
-                  <i data-lucide="help-circle"></i> Suporte
+                <button class="menu-item flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-100" data-tab="reta-final-tab">
+                  <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i> Reta Final ENEM
                 </button>
               </nav>
-              
-              <div class="sidebar-profile">
-                <div class="profile-info">
-                  <div class="profile-name">Miguel</div>
-                  <div class="profile-email">miguel••••@gmail.com</div>
-                </div>
-                <button class="btn-new-plan" id="btn-trigger-simulator">
-                  <i data-lucide="refresh-cw"></i> Gerar novo plano
-                </button>
+
+              <div class="border-t border-slate-200 pt-3 mt-4">
+                <div class="text-[11px] font-bold text-slate-800">Estudante WayUp</div>
+                <div class="text-[10px] text-slate-500 truncate mb-2">aluno@exemplo.com</div>
               </div>
             </aside>
-            
-            <!-- App Main Area -->
-            <div class="app-main">
-              <!-- App Topbar -->
-              <header class="app-topbar">
-                <div class="topbar-stats">
-                  <div class="stat-item">
-                    <i data-lucide="calendar"></i>
-                    <div>
-                      <span class="stat-label">FALTAM</span>
-                      <span class="stat-value" id="app-days-left">130 dias</span>
-                    </div>
+
+            <div class="app-main flex flex-col bg-[#f4f5f1]">
+              <div class="bg-[#083c27] text-white px-4 py-2.5 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-4">
+                  <div>
+                    <span class="text-[9px] uppercase tracking-wider text-emerald-200/70 block font-bold">FALTAM</span>
+                    <span class="font-bold text-xs" id="app-days-left">91 dias</span>
                   </div>
-                  <div class="stat-item">
-                    <i data-lucide="target"></i>
-                    <div>
-                      <span class="stat-label">OBJETIVO</span>
-                      <span class="stat-value" id="app-target-course">Outro curso</span>
-                    </div>
-                  </div>
-                  <div class="stat-item status-rhythm">
-                    <span class="rhythm-dot"></span>
-                    <span class="stat-value">No ritmo</span>
+                  <div class="h-6 border-l border-emerald-700/50"></div>
+                  <div>
+                    <span class="text-[9px] uppercase tracking-wider text-emerald-200/70 block font-bold">OBJETIVO</span>
+                    <span class="font-bold text-xs text-amber-300" id="app-target-course">Aprovação ENEM</span>
                   </div>
                 </div>
-                
-                <div class="topbar-right">
-                  <span class="enem-date">ENEM • 8 E 15 NOV</span>
-                  <div class="notification-bell">
-                    <i data-lucide="bell"></i>
-                    <span class="bell-badge">1</span>
+
+                <div class="flex items-center gap-3">
+                  <span class="hidden sm:inline-block bg-emerald-900/60 text-emerald-300 text-[10px] px-2 py-0.5 rounded-full font-bold">● No Ritmo Ideal</span>
+                  <div class="relative cursor-pointer">
+                    <i data-lucide="bell" class="w-4 h-4 text-emerald-200"></i>
+                    <span class="absolute -top-1 -right-1 bg-amber-400 text-black text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">1</span>
                   </div>
                 </div>
-              </header>
-              
-              <!-- App Content Container -->
-              <div class="app-content-viewport">
-                <!-- TAB: Hoje (Active by Default) -->
+              </div>
+
+              <div class="p-4 overflow-y-auto flex-grow">
                 <div class="tab-content active" id="tab-hoje">
-                  <div class="app-greeting">
-                    <span class="date-badge">
-                      <i data-lucide="sun"></i> BOM DIA, MIGUEL • QUARTA-FEIRA, 1 DE JULHO
-                    </span>
-                    <h2 class="app-main-title">Você está mais perto da aprovação hoje.</h2>
+                  <div class="mb-3">
+                    <span class="text-[10px] font-bold text-emerald-800 tracking-wider uppercase block">BOM DIA • DIREÇÃO DE HOJE</span>
+                    <h3 class="text-lg font-bold text-slate-900">Você está mais perto da aprovação hoje.</h3>
                   </div>
-                  
-                  <!-- Metrics Card Grid -->
-                  <div class="app-metrics-card">
-                    <div class="metric-column">
-                      <span class="card-label">OBJETIVO FINAL</span>
-                      <span class="card-value" id="card-obj-val">Outro curso</span>
-                      <span class="card-desc">Sua meta de aprovação</span>
+
+                  <div class="bg-gradient-to-br from-[#083c27] to-[#042417] text-white rounded-xl p-3.5 mb-4 grid grid-cols-2 sm:grid-cols-5 gap-2 border border-emerald-500/20 shadow-md">
+                    <div>
+                      <span class="text-[9px] text-emerald-200/70 font-bold block">OBJETIVO</span>
+                      <span class="text-xs font-extrabold text-amber-300 truncate block">Medicina / Geral</span>
                     </div>
-                    <div class="metric-column border-left">
-                      <span class="card-label">DIAS RESTANTES</span>
-                      <span class="card-value" id="card-days-val">130</span>
-                      <span class="card-desc">ENEM - 8 e 15 de novembro</span>
+                    <div>
+                      <span class="text-[9px] text-emerald-200/70 font-bold block">DIAS RESTANTES</span>
+                      <span class="text-xs font-extrabold block">91</span>
                     </div>
-                    <div class="metric-column border-left">
-                      <span class="card-label">SEMANA ATUAL</span>
-                      <span class="card-value" id="card-week-val">1 de 19</span>
-                      <span class="card-desc">Sua jornada</span>
+                    <div>
+                      <span class="text-[9px] text-emerald-200/70 font-bold block">SEMANA ATUAL</span>
+                      <span class="text-xs font-extrabold block">1 de 19</span>
                     </div>
-                    <div class="metric-column border-left">
-                      <span class="card-label">PREPARAÇÃO</span>
-                      <span class="card-value" id="card-prep-val">1%</span>
-                      <span class="card-desc">Nível Iniciante</span>
+                    <div>
+                      <span class="text-[9px] text-emerald-200/70 font-bold block">PREPARAÇÃO</span>
+                      <span class="text-xs font-extrabold text-emerald-300 block" id="card-prep-val">1%</span>
                     </div>
-                    <div class="metric-column border-left">
-                      <span class="card-label">SEQUÊNCIA</span>
-                      <span class="card-value" id="card-streak-val">0</span>
-                      <span class="card-desc">Sua sequência começa hoje</span>
+                    <div>
+                      <span class="text-[9px] text-emerald-200/70 font-bold block">SEQUÊNCIA</span>
+                      <span class="text-xs font-extrabold text-amber-300 block" id="card-streak-val">0 dias</span>
                     </div>
                   </div>
-                  
-                  <!-- Dynamic Section Rows -->
-                  <div class="app-rows-grid">
-                    <!-- Assistente do Dia -->
-                    <div class="app-card card-assistente">
-                      <div class="card-header-row">
-                        <div class="card-header-title">
-                          <i data-lucide="shield-check" class="green-text"></i>
-                          ASSISTENTE DO DIA
-                        </div>
-                        <span class="alert-count">Alertas de Hoje • 1</span>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+                      <div class="flex items-center justify-between mb-2">
+                        <span class="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-1">
+                          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i> ASSISTENTE DO DIA
+                        </span>
+                        <span class="text-[10px] font-semibold text-rose-600 bg-rose-50 px-1.5 py-0.5 rounded">1 Alerta</span>
                       </div>
                       
-                      <div class="task-box">
-                        <div class="task-icon-wrapper">
-                          <i data-lucide="target" class="pink-text"></i>
-                        </div>
-                        <div class="task-details">
-                          <span class="task-tag">MARCO</span>
-                          <h4 class="task-title" id="task-title-text">Próximo marco</h4>
-                          <p class="task-desc" id="task-desc-text">Faltam apenas 3 conteúdos para alcançar seu próximo nível: Básico.</p>
-                        </div>
-                        <button class="btn-action-task" id="btn-complete-task">
-                          Continuar jornada <i data-lucide="arrow-right"></i>
-                        </button>
+                      <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100 mb-2">
+                        <span class="text-[9px] font-bold uppercase text-pink-600 bg-pink-100 px-1.5 py-0.5 rounded inline-block mb-1">Próximo Marco</span>
+                        <h4 class="text-xs font-bold text-slate-900" id="task-title-text">Biologia Celular + Redação</h4>
+                        <p class="text-[11px] text-slate-600 leading-tight mt-0.5" id="task-desc-text">Responda as 10 questões direcionadas de Biologia e envie o rascunho de Redação.</p>
                       </div>
+
+                      <button class="w-full py-1.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-bold text-xs rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm" id="btn-complete-task">
+                        <span>Continuar Jornada</span>
+                        <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                      </button>
                     </div>
-                    
-                    <!-- Preparação para o ENEM -->
-                    <div class="app-card card-preparacao">
-                      <div class="card-header-title">
-                        <i data-lucide="trending-up"></i> PREPARAÇÃO PARA O ENEM
+
+                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                      <div>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-1 mb-2">
+                          <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-600"></i> PREPARAÇÃO ENEM
+                        </span>
+                        <div class="text-2xl font-extrabold text-slate-900 leading-none" id="progress-big-val">1%</div>
+                        <p class="text-[11px] text-slate-500 mt-1" id="progress-sub-desc">Você está 1% mais perto da aprovação.</p>
                       </div>
-                      <div class="prep-progress-wrapper">
-                        <div class="progress-big-number" id="progress-big-val">1%</div>
-                        <p class="progress-subtext" id="progress-sub-desc">Você está 1% mais perto da aprovação.</p>
-                        <div class="progress-bar-bg">
-                          <div class="progress-bar-fill" id="progress-fill-bar" style="width: 1%"></div>
-                        </div>
+
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mt-3">
+                        <div class="bg-emerald-600 h-full rounded-full transition-all duration-500" id="progress-fill-bar" style="width: 1%"></div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- TAB: Minha Jornada -->
-                <div class="tab-content" id="tab-jornada">
-                  <h3 class="tab-section-title">Minha Jornada de Estudos</h3>
-                  <p class="tab-section-desc">Esta é a sua trilha personalizada de conteúdos organizada por peso de incidência no ENEM e grau de dificuldade.</p>
+                <div class="tab-content hidden" id="tab-jornada">
+                  <h4 class="text-xs font-bold text-slate-900 mb-1">Trilha de Conteúdos por Incidência</h4>
+                  <p class="text-[11px] text-slate-500 mb-3">Conteúdos ordenados por peso no TRI e frequência no ENEM.</p>
                   
-                  <div class="timeline-container">
-                    <div class="timeline-step completed">
-                      <div class="step-icon"><i data-lucide="check"></i></div>
-                      <div class="step-content">
-                        <h4>Módulo Inicial: Nivelamento</h4>
-                        <p>Matemática Básica, Interpretação de Texto e Introdução à Redação.</p>
+                  <div class="space-y-2 text-xs">
+                    <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded-lg flex items-center justify-between">
+                      <div>
+                        <span class="font-bold text-emerald-900 block">✓ Módulo 1: Matemática Básica & Porcentagem</span>
+                        <span class="text-[10px] text-emerald-700">100% Concluído • 30 Questões Resolvidas</span>
                       </div>
+                      <span class="bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Ok</span>
                     </div>
-                    <div class="timeline-step current">
-                      <div class="step-icon"><i data-lucide="play"></i></div>
-                      <div class="step-content">
-                        <h4>Módulo 2: Conteúdos de Maior Incidência</h4>
-                        <p>Funções, Ecologia, República Velha e Coesão Textual.</p>
-                        <span class="badge-status">Em andamento</span>
+
+                    <div class="bg-amber-50 border border-amber-200 p-2.5 rounded-lg flex items-center justify-between">
+                      <div>
+                        <span class="font-bold text-amber-900 block">⚡ Módulo 2: Funções & Ecologia (Alta Incidência)</span>
+                        <span class="text-[10px] text-amber-700">Em andamento • Meta de hoje ativa</span>
                       </div>
-                    </div>
-                    <div class="timeline-step locked">
-                      <div class="step-icon"><i data-lucide="lock"></i></div>
-                      <div class="step-content">
-                        <h4>Módulo 3: Consolidação e Aprofundamento</h4>
-                        <p>Física Térmica, Química Orgânica, Análise Combinatória e Estrutura de Redação Avançada.</p>
-                      </div>
-                    </div>
-                    <div class="timeline-step locked">
-                      <div class="step-icon"><i data-lucide="lock"></i></div>
-                      <div class="step-content">
-                        <h4>Módulo 4: Reta Final & Simulações</h4>
-                        <p>Revisão geral, 5 simulados completos oficiais ENEM e estratégia de prova.</p>
-                      </div>
+                      <span class="bg-amber-500 text-black text-[10px] font-bold px-2 py-0.5 rounded-full">Atual</span>
                     </div>
                   </div>
                 </div>
 
-                <!-- TAB: Evolução -->
-                <div class="tab-content" id="tab-evolucao">
-                  <h3 class="tab-section-title">Minha Evolução Acadêmica</h3>
-                  <p class="tab-section-desc">Acompanhe seu desempenho por área do conhecimento e veja sua nota preditiva no TRI subir.</p>
+                <div class="tab-content hidden" id="tab-evolucao">
+                  <h4 class="text-xs font-bold text-slate-900 mb-1">Desempenho por Área do Conhecimento</h4>
+                  <p class="text-[11px] text-slate-500 mb-3">Previsão TRI em tempo real atualizada a cada simulado.</p>
                   
-                  <div class="evolution-grid">
-                    <div class="evolution-card">
-                      <span class="area-title">Matemática e suas Tecnologias</span>
-                      <div class="bar-evolution-wrapper">
-                        <div class="bar-label">Desempenho nos simulados: 710 pontos</div>
-                        <div class="bar-container"><div class="bar-indicator" style="width: 71%"></div></div>
-                      </div>
+                  <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                      <span class="text-[10px] font-bold text-slate-500 block">MATEMÁTICA</span>
+                      <span class="font-extrabold text-emerald-700 text-sm">740 pts</span>
                     </div>
-                    <div class="evolution-card">
-                      <span class="area-title">Ciências da Natureza</span>
-                      <div class="bar-evolution-wrapper">
-                        <div class="bar-label">Desempenho nos simulados: 630 pontos</div>
-                        <div class="bar-container"><div class="bar-indicator" style="width: 63%"></div></div>
-                      </div>
+                    <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                      <span class="text-[10px] font-bold text-slate-500 block">NATUREZA</span>
+                      <span class="font-extrabold text-emerald-700 text-sm">680 pts</span>
                     </div>
-                    <div class="evolution-card">
-                      <span class="area-title">Linguagens e Códigos</span>
-                      <div class="bar-evolution-wrapper">
-                        <div class="bar-label">Desempenho nos simulados: 680 pontos</div>
-                        <div class="bar-container"><div class="bar-indicator" style="width: 68%"></div></div>
-                      </div>
+                    <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                      <span class="text-[10px] font-bold text-slate-500 block">HUMANAS</span>
+                      <span class="font-extrabold text-emerald-700 text-sm">710 pts</span>
                     </div>
-                    <div class="evolution-card">
-                      <span class="area-title">Ciências Humanas</span>
-                      <div class="bar-evolution-wrapper">
-                        <div class="bar-label">Desempenho nos simulados: 720 pontos</div>
-                        <div class="bar-container"><div class="bar-indicator" style="width: 72%"></div></div>
-                      </div>
+                    <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                      <span class="text-[10px] font-bold text-slate-500 block">LINGUAGENS</span>
+                      <span class="font-extrabold text-emerald-700 text-sm">690 pts</span>
                     </div>
                   </div>
                 </div>
 
-                <!-- TAB: Outras Abas (Placeholder Simplificado) -->
-                <div class="tab-content" id="tab-generic">
-                  <h3 class="tab-section-title" id="generic-tab-title">Seção do App</h3>
-                  <div class="tab-generic-body">
-                    <i data-lucide="sparkles" class="generic-icon"></i>
-                    <p id="generic-tab-desc">Esta funcionalidade completa está ativa na sua conta de estudante pós-inscrição.</p>
-                    <a href="#planos" class="btn btn-secondary">Quero Acesso Completo</a>
+                <div class="tab-content hidden" id="tab-reta-final-tab">
+                  <div class="bg-amber-950/20 border border-amber-500/30 p-3 rounded-xl mb-3 text-xs">
+                    <span class="bg-amber-500 text-black text-[9px] font-bold px-2 py-0.5 rounded-full inline-block mb-1">📅 Modo Reta Final</span>
+                    <h4 class="font-bold text-slate-900">Disponível em 61 dias</h4>
+                    <p class="text-[10px] text-slate-600">Faltam 91 dias para o ENEM (8 e 15 de novembro). O plano especial será ativado nos últimos 30 dias!</p>
                   </div>
                 </div>
               </div>
-              
-              <!-- Floating Support Button inside App Preview -->
-              <div class="app-support-btn">
-                <i data-lucide="message-square"></i> Suporte
-              </div>
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
 
-    <!-- The Pain Points / Problem Section -->
-    <section class="problem-section" id="como-funciona">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title">Você não precisa estudar mais. <span class="text-danger">Precisa estudar na direção certa.</span></h2>
-          <p class="section-subtitle">Enquanto muitos estudantes perdem tempo tentando decidir o que estudar, a WayUp elimina essa dúvida e mostra exatamente qual é o próximo passo até o ENEM</p>
+    <!-- MARQUEE TICKER BAR -->
+    <section class="py-6 bg-[#021109] border-y border-white/10 overflow-hidden relative">
+      <div class="marquee-track flex items-center gap-8 text-xs md:text-sm font-semibold text-white/80 whitespace-nowrap">
+        <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> +94.8% Retenção de Conteúdo</span>
+        <span class="text-white/20">•</span>
+        <span class="flex items-center gap-2"><i data-lucide="cpu" class="w-4 h-4 text-amber-400"></i> Algoritmo TRI Adaptativo</span>
+        <span class="text-white/20">•</span>
+        <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-emerald-400"></i> 91 Dias até o ENEM</span>
+        <span class="text-white/20">•</span>
+        <span class="flex items-center gap-2"><i data-lucide="shield-alert" class="w-4 h-4 text-rose-400"></i> Zero Sobrecarga de PDF</span>
+        <span class="text-white/20">•</span>
+        <span class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-emerald-400"></i> +4.500 Alunos Aprovados</span>
+        <span class="text-white/20">•</span>
+        <span class="flex items-center gap-2"><i data-lucide="rotate-ccw" class="w-4 h-4 text-amber-400"></i> Revisões Espaçadas Automáticas</span>
+      </div>
+    </section>
+
+    <!-- CONTEXT SECTION ("Esta ferramenta é para quem:") -->
+    <section class="py-24 bg-[#000401] relative" id="context">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">Público-Alvo & Diagnóstico</span>
+          <h2 class="text-3xl md:text-5xl font-headline font-bold text-white tracking-tight">Esta ferramenta é para quem:</h2>
         </div>
-        
-        <div class="problem-grid">
-          <!-- Problem LED Card 1 -->
-          <div class="led-card prob-led-card" id="prob-card-1">
-            <div class="led-card-glow"></div>
-            <div class="led-card-inner prob-card-inner">
-              <div class="problem-icon"><i data-lucide="alert-octagon"></i></div>
-              <h3>📚 Matérias acumuladas</h3>
-              <p>Basta perder um dia para o cronograma inteiro sair do controle.</p>
-            </div>
-          </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-white/10 bg-white/[0.02] rounded-3xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-white/10">
           
-          <!-- Problem LED Card 2 -->
-          <div class="led-card prob-led-card" id="prob-card-2">
-            <div class="led-card-glow"></div>
-            <div class="led-card-inner prob-card-inner">
-              <div class="problem-icon"><i data-lucide="clock"></i></div>
-              <h3>⏰ Horas desperdiçadas</h3>
-              <p>Você perde tempo decidindo o que estudar em vez de realmente estudar.</p>
+          <div class="p-8 space-y-3 hover:bg-white/[0.03] transition-colors">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <i data-lucide="help-circle" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-sm font-bold uppercase tracking-wider text-white">Não Sabe O Que Estudar</h3>
             </div>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Abre os livros todo dia e perde mais tempo pensando por onde começar do que realmente estudando conteúdos relevantes.
+            </p>
           </div>
+
+          <div class="p-8 space-y-3 hover:bg-white/[0.03] transition-colors">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-sm font-bold uppercase tracking-wider text-white">Curva do Esquecimento</h3>
+            </div>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Estuda uma matéria hoje, passa 2 semanas e sente que esqueceu completamente o conteúdo no momento das questões.
+            </p>
+          </div>
+
+          <div class="p-8 space-y-3 hover:bg-white/[0.03] transition-colors">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 rounded-xl bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                <i data-lucide="file-x" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-sm font-bold uppercase tracking-wider text-white">Cronogramas PDF Quebrados</h3>
+            </div>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Já tentou seguir planilhas rígidas que viraram um caos completo assim que você atrasou o primeiro dia de matérias.
+            </p>
+          </div>
+
+          <div class="p-8 space-y-3 hover:bg-white/[0.03] transition-colors border-t border-white/10">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <i data-lucide="target" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-sm font-bold uppercase tracking-wider text-white">Falta de Foco no TRI</h3>
+            </div>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Gasta energia em tópicos complexos e raros no ENEM em vez de dominar o que possui maior peso na sua faculdade alvo.
+            </p>
+          </div>
+
+          <div class="p-8 space-y-3 hover:bg-white/[0.03] transition-colors border-t border-white/10">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-sm font-bold uppercase tracking-wider text-white">Poucas Horas por Dia</h3>
+            </div>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Precisa conciliar o ENEM com o ensino médio, cursinho ou trabalho e não tem 10 horas livres diárias para perder.
+            </p>
+          </div>
+
+          <div class="p-8 space-y-3 hover:bg-white/[0.03] transition-colors border-t border-white/10">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-sm font-bold uppercase tracking-wider text-white">Quer Passar Este Ano</h3>
+            </div>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Não quer perder mais um ano da sua vida pagando cursinhos caríssimos ou estudando sem garantia de resultado.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUE E COMO O WAYUP TE APROVA (Substitui a seção antiga) -->
+    <section class="py-24 bg-[#02120a] border-y border-white/10 relative" id="como-funciona">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2 block">Metodologia & Ciência</span>
+          <h2 class="text-3xl md:text-5xl font-headline font-bold text-white mb-4">Por que e como o WayUp vai te fazer passar no ENEM</h2>
+          <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+            Passar no ENEM não é uma questão de estudar até o esgotamento. É uma questão de engenharia de estudos e consistência direcionada.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           
-          <!-- Problem LED Card 3 -->
-          <div class="led-card prob-led-card" id="prob-card-3">
-            <div class="led-card-glow"></div>
-            <div class="led-card-inner prob-card-inner">
-              <div class="problem-icon"><i data-lucide="brain-circuit"></i></div>
-              <h3>🧠 Dá branco na prova</h3>
-              <p>Sem revisões no momento certo, o cérebro esquece o conteúdo.</p>
+          <!-- Pillar 1 -->
+          <div class="p-8 rounded-3xl bg-[#000603] border border-white/10 hover:border-emerald-500/40 transition-all space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-headline font-bold text-xl border border-emerald-500/20">01</div>
+            <h3 class="text-xl font-bold text-white">Eliminação Total do Esforço de Organização</h3>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Decidir o que estudar todo dia consome até 40% da sua energia mental antes mesmo de abrir o livro. Com o WayUp, você só abre o app, olha a tarefa do <strong>Assistente do Dia</strong> e executa.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="p-8 rounded-3xl bg-[#000603] border border-white/10 hover:border-emerald-500/40 transition-all space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-headline font-bold text-xl border border-amber-500/20">02</div>
+            <h3 class="text-xl font-bold text-white">Foco Absoluto na Recorrência e Peso TRI</h3>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              O algoritmo do WayUp sabe exatamente quais assuntos caem em 80% das provas do ENEM e ajusta os pesos de estudo conforme o curso desejado (ex: Medicina valoriza Natureza, Direito valoriza Humanas).
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="p-8 rounded-3xl bg-[#000603] border border-white/10 hover:border-emerald-500/40 transition-all space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-headline font-bold text-xl border border-emerald-500/20">03</div>
+            <h3 class="text-xl font-bold text-white">Blindagem Contra o Esquecimento</h3>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Sem revisão programada, seu cérebro descarta 80% do que foi estudado em 15 dias. O WayUp dispara alertas de revisão espaçada ativa no exato instante necessário para fixação definitiva.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="p-8 rounded-3xl bg-[#000603] border border-white/10 hover:border-emerald-500/40 transition-all space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-headline font-bold text-xl border border-amber-500/20">04</div>
+            <h3 class="text-xl font-bold text-white">Ajuste Dinâmico sem Culpa nem Atrasos</h3>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Faltou um dia por doença ou imprevisto? Em cronogramas comuns em PDF você desiste. No WayUp, a ferramenta redistribui as pendências de forma inteligente ao longo das semanas restantes.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLETE FEATURES GRID -->
+    <section class="py-24 bg-[#000401] relative" id="features">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">Ecossistema Completo</span>
+          <h2 class="text-3xl md:text-5xl font-headline font-bold text-white mb-4">Tudo o que você precisa para ser aprovado</h2>
+          <p class="text-slate-400 text-base md:text-lg">Chega de perder tempo montando esquemas. O WayUp entrega a direção pronta.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="group relative p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-emerald-500/40 transition-all duration-300 space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
             </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Assistente do Dia</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Abra a aplicação e veja na hora o que estudar hoje. Matérias e bloco de questões organizadas sem hesitação.
+            </p>
+          </div>
+
+          <div class="group relative p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-emerald-500/40 transition-all duration-300 space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+              <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">Cronograma Adaptativo</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Atrasou uma matéria por imprevisto? Um clique e o algoritmo redistribui seus estudos sem estragar seu plano.
+            </p>
+          </div>
+
+          <div class="group relative p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-emerald-500/40 transition-all duration-300 space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <i data-lucide="rotate-ccw" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Anti-Esquecimento</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Sistema automático de revisões espaçadas programadas nos dias 1, 7 e 30 pós-conteúdo. Retenção máxima garantida.
+            </p>
+          </div>
+
+          <div class="group relative p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-emerald-500/40 transition-all duration-300 space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+              <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">Evolução TRI Real</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Acompanhe seu desempenho por área (Matemática, Natureza, Humanas, Linguagens) e veja a nota estimada subir.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How it Works (Steps) Section -->
-    <section class="features-detail-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title">Imagine abrir a WayUp e já saber exatamente o que fazer hoje</h2>
-          <p class="section-subtitle">Pare de decidir matérias, montar cronogramas ou lembrar quando revisar. A WayUp organiza tudo para você.</p>
-        </div>
-        
-        <div class="led-cards-grid">
-          <!-- Card 1: O que estudar -->
-          <div class="led-card" id="led-card-1">
-            <div class="led-card-glow"></div>
-            <div class="led-card-inner">
-              <div class="led-card-icon">
-                <span class="led-emoji">📚</span>
-                <div class="led-icon-ring"></div>
-              </div>
-              <h3 class="led-card-title">O que estudar</h3>
-              <p class="led-card-desc">Nunca mais fique perdido escolhendo matérias. A WayUp define o caminho certo para você todo dia.</p>
-              <div class="led-card-badge">Direção diária automática</div>
-            </div>
-          </div>
-
-          <!-- Card 2: Quando revisar -->
-          <div class="led-card" id="led-card-2">
-            <div class="led-card-glow"></div>
-            <div class="led-card-inner">
-              <div class="led-card-icon">
-                <span class="led-emoji">🧠</span>
-                <div class="led-icon-ring"></div>
-              </div>
-              <h3 class="led-card-title">Quando revisar</h3>
-              <p class="led-card-desc">A WayUp avisa exatamente quando revisar para evitar esquecimentos, no momento certo que seu cérebro precisa.</p>
-              <div class="led-card-badge">Curva do esquecimento</div>
-            </div>
-          </div>
-
-          <!-- Card 3: O que priorizar -->
-          <div class="led-card" id="led-card-3">
-            <div class="led-card-glow"></div>
-            <div class="led-card-inner">
-              <div class="led-card-icon">
-                <span class="led-emoji">🎯</span>
-                <div class="led-icon-ring"></div>
-              </div>
-              <h3 class="led-card-title">O que priorizar</h3>
-              <p class="led-card-desc">Seu tempo vai para os conteúdos com maior impacto na sua nota. Zero desperdício, máximo resultado.</p>
-              <div class="led-card-badge">Foco inteligente</div>
-            </div>
-          </div>
-
-          <!-- Card 4: Seu progresso -->
-          <div class="led-card" id="led-card-4">
-            <div class="led-card-glow"></div>
-            <div class="led-card-inner">
-              <div class="led-card-icon">
-                <span class="led-emoji">📈</span>
-                <div class="led-icon-ring"></div>
-              </div>
-              <h3 class="led-card-title">Seu progresso</h3>
-              <p class="led-card-desc">Veja exatamente quanto já avançou até o ENEM. Cada dia de estudo reflete na sua barra de aprovação.</p>
-              <div class="led-card-badge">Evolução em tempo real</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How it Works Step-by-Step Section -->
-    <section class="how-section" id="como-funciona-steps">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="how-badge"><i data-lucide="zap"></i> Simples assim</div>
-          <h2 class="section-title">Como funciona?</h2>
-          <p class="section-subtitle">Em menos de 2 minutos você configura tudo. O resto, a WayUp faz por você.</p>
+    <!-- MODULES SECTION ("O que você recebe no WayUp" com Modo Reta Final ENEM e Suporte WhatsApp) -->
+    <section class="py-20 bg-[#021109] border-t border-white/10 relative" id="modules">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">Estrutura de Acesso</span>
+          <h2 class="text-3xl md:text-5xl font-headline font-bold text-white mb-4">O que você recebe no WayUp</h2>
+          <p class="text-slate-400 text-sm md:text-base">Passo a passo organizado e ferramentas ativas para sua aprovação.</p>
         </div>
 
-        <div class="how-steps-wrapper">
-          <!-- Step 1 -->
-          <div class="how-step">
-            <div class="how-step-number">01</div>
-            <div class="how-step-content">
-              <div class="how-step-icon-wrap">
-                <i data-lucide="mail"></i>
-              </div>
-              <div class="how-step-text">
-                <h3>Receba seu link de acesso</h3>
-                <p>Após a confirmação, você recebe um e-mail com seu link exclusivo de acesso à plataforma WayUp. Sem downloads, sem instalações — funciona direto no navegador.</p>
+        <div class="space-y-4 mb-12">
+          <div class="p-6 rounded-2xl bg-[#000603] border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-emerald-500/30 transition-all">
+            <div class="flex items-center gap-4">
+              <span class="text-xs font-extrabold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-lg">MÓDULO 01</span>
+              <div>
+                <h3 class="text-base font-bold text-white">Calibragem Inicial do Objetivo</h3>
+                <p class="text-xs text-slate-400">Definição da universidade, curso e cálculo inicial do seu cronograma de dias.</p>
               </div>
             </div>
+            <span class="text-xs text-emerald-300 font-semibold flex items-center gap-1"><i data-lucide="check" class="w-4 h-4"></i> Liberado Imediatamente</span>
           </div>
 
-          <div class="how-step-connector"><span></span></div>
-
-          <!-- Step 2 -->
-          <div class="how-step">
-            <div class="how-step-number">02</div>
-            <div class="how-step-content">
-              <div class="how-step-icon-wrap">
-                <i data-lucide="user-check"></i>
-              </div>
-              <div class="how-step-text">
-                <h3>Informe seu nome e curso objetivo</h3>
-                <p>Diga seu nome e qual curso está mirando — Medicina, Direito, Engenharia ou qualquer outro. Isso calibra os pesos das matérias exatamente para o que a sua universidade pede.</p>
+          <div class="p-6 rounded-2xl bg-[#000603] border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-emerald-500/30 transition-all">
+            <div class="flex items-center gap-4">
+              <span class="text-xs font-extrabold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-lg">MÓDULO 02</span>
+              <div>
+                <h3 class="text-base font-bold text-white">Assistente do Dia & Rotina Diária</h3>
+                <p class="text-xs text-slate-400">Gerenciador de metas diárias de teoria e listas de exercícios resolvidos.</p>
               </div>
             </div>
+            <span class="text-xs text-emerald-300 font-semibold flex items-center gap-1"><i data-lucide="check" class="w-4 h-4"></i> Liberado Imediatamente</span>
           </div>
 
-          <div class="how-step-connector"><span></span></div>
-
-          <!-- Step 3 -->
-          <div class="how-step">
-            <div class="how-step-number">03</div>
-            <div class="how-step-content">
-              <div class="how-step-icon-wrap">
-                <i data-lucide="clock-4"></i>
-              </div>
-              <div class="how-step-text">
-                <h3>Quantas horas você tem por semana?</h3>
-                <p>Informe sua disponibilidade real de estudo — pode ser 2 horas ou 8 horas por dia. O algoritmo monta um plano 100% possível de cumprir dentro da sua rotina, sem sobrecarga.</p>
+          <div class="p-6 rounded-2xl bg-[#000603] border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-emerald-500/30 transition-all">
+            <div class="flex items-center gap-4">
+              <span class="text-xs font-extrabold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-lg">MÓDULO 03</span>
+              <div>
+                <h3 class="text-base font-bold text-white">Sistema Anti-Esquecimento (Revisões Espaçadas)</h3>
+                <p class="text-xs text-slate-400">Automação de lembretes e questões de fixação nos momentos críticos.</p>
               </div>
             </div>
+            <span class="text-xs text-emerald-300 font-semibold flex items-center gap-1"><i data-lucide="check" class="w-4 h-4"></i> Liberado Imediatamente</span>
           </div>
 
-          <div class="how-step-connector"><span></span></div>
-
-          <!-- Step 4 -->
-          <div class="how-step">
-            <div class="how-step-number">04</div>
-            <div class="how-step-content">
-              <div class="how-step-icon-wrap how-step-icon-gold">
-                <i data-lucide="sparkles"></i>
-              </div>
-              <div class="how-step-text">
-                <h3>Seu plano fica pronto em <span class="how-highlight">10 segundos</span></h3>
-                <p>Pronto. Tudo o que você precisa fazer é <strong>abrir e seguir</strong>. A WayUp te diz o que estudar hoje, o que revisar amanhã e como chegar ao ENEM com confiança.</p>
-                <div class="how-ready-badge">
-                  <i data-lucide="check-circle-2"></i>
-                  Plano gerado. Abra e siga.
-                </div>
+          <!-- Mapeamento do Suporte via WhatsApp -->
+          <div class="p-6 rounded-2xl bg-[#000603] border border-emerald-500/30 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-emerald-500/50 transition-all">
+            <div class="flex items-center gap-4">
+              <span class="text-xs font-extrabold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-3 py-1.5 rounded-lg">SUPORTE DEDICADO</span>
+              <div>
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                  Suporte Direto pelo WhatsApp <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+                </h3>
+                <p class="text-xs text-slate-400">Tire todas as suas dúvidas de uso, organização e estratégia direto com nossa equipe sempre que precisar.</p>
               </div>
             </div>
+            <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4"></i> Ativo Ilimitado</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Mid-page Conversion CTA -->
-    <section class="mid-cta-section">
-      <div class="container text-center">
-        <p class="mid-cta-text">Já são <strong>+850 estudantes</strong> estudando com direção diária. Pare de perder tempo se organizando e comece agora.</p>
-        <a href="#planos" class="btn btn-primary btn-lg" id="btn-mid-cta">
-          Quero Minha Direção Diária <i data-lucide="arrow-right"></i>
-        </a>
-      </div>
-    </section>
-
-    <!-- Methodology Section (Scientific Proof) -->
-    <section class="methodology-section" id="metodologia">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title text-white">A Ciência por Trás da Direção WayUp</h2>
-          <p class="section-subtitle text-light">Esqueça a decoreba inútil. Focamos no que traz resultado com base em estudos de neurociência cognitiva.</p>
-        </div>
-
-        <div class="comparison-table-wrapper">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Recurso de Estudo</th>
-                <th class="danger-header">Estudo Tradicional</th>
-                <th class="gold-header">Sistema de Direção WayUp</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="feature-title">Organização da Rotina</td>
-                <td>Você gasta até 3 horas semanais organizando o que estudar.</td>
-                <td class="success-cell"><i data-lucide="check"></i> Pronto em 5 segundos. O app faz tudo por você.</td>
-              </tr>
-              <tr>
-                <td class="feature-title">Imprevistos e Atrasos</td>
-                <td>Se você perde um dia, se sente culpado e desiste do plano todo.</td>
-                <td class="success-cell"><i data-lucide="check"></i> O algoritmo redistribui as matérias automaticamente.</td>
-              </tr>
-              <tr>
-                <td class="feature-title">Retenção de Conteúdo</td>
-                <td>Estudo passivo (vídeo + anotação). Esquece tudo em semanas.</td>
-                <td class="success-cell"><i data-lucide="check"></i> Revisão espaçada automatizada para fixação de longo prazo.</td>
-              </tr>
-              <tr>
-                <td class="feature-title">Controle de Ansiedade</td>
-                <td>Sensação constante de estar atrasado ou estudando errado.</td>
-                <td class="success-cell"><i data-lucide="check"></i> Clareza diária. Você deita a cabeça no travesseiro sabendo que cumpriu a meta ideal.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials / Social Proof Section -->
-    <section class="testimonials-section" id="depoimentos">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title">Quem usa WayUp já está com um pé na aprovação</h2>
-          <p class="section-subtitle">Comentários reais de estudantes que trocaram a ansiedade por direção clara, todos os dias.</p>
-        </div>
-      </div>
-
-      <!-- Auto-scrolling comments feed -->
-      <div class="t-marquee-wrapper">
-        <div class="t-marquee-track" id="testimonials-track">
-
-          <!-- T1 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar bg-gold">M</div>
-              <div class="t-info">
-                <h4>Mariana Santos <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Medicina (ENEM 2025)</span>
-              </div>
+        <!-- MODO RETA FINAL ENEM (Seção Dedicada conforme especificações) -->
+        <div class="p-8 md:p-10 rounded-3xl border-2 border-amber-500/40 bg-gradient-to-b from-amber-950/30 via-[#000804] to-[#000401] shadow-[0_0_50px_rgba(245,158,11,0.15)] relative overflow-hidden">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-amber-500/20">
+            <div>
+              <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-amber-400 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full mb-2">
+                <i data-lucide="zap" class="w-3.5 h-3.5"></i> FUNCIONALIDADE EXCLUSIVA
+              </span>
+              <h3 class="text-2xl md:text-3xl font-headline font-extrabold text-white">Modo Reta Final ENEM</h3>
+              <p class="text-xs md:text-sm text-slate-300 mt-1">A estratégia especial do WayUp para os últimos 30 dias antes da prova.</p>
             </div>
-            <p class="t-msg">gente eu juro que já tinha desistido de fazer cronograma sozinha, sempre dava errado depois de 3 dias 😅 com o WayUp eu só abria o app e seguia, não tinha decisão pra tomar. quando saiu o resultado e vi que passei em Medicina eu chorei o dia inteiro</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 3 dias</span>
-              <i data-lucide="check-check" class="t-seen"></i>
+
+            <!-- Status Tag -->
+            <div class="bg-amber-950/80 border border-amber-500/40 p-4 rounded-2xl text-left md:text-right">
+              <div class="text-xs font-bold text-amber-300 flex items-center md:justify-end gap-1.5 mb-1">
+                <span>📅 Disponível em 61 dias</span>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-mono">Faltam 91 dias para o ENEM (8 e 15 de novembro)</span>
             </div>
           </div>
 
-          <!-- T2 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar bg-emerald">G</div>
-              <div class="t-info">
-                <h4>Gabriel Rezende <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Direito (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">trabalhava o dia todo e só sobrava a noite pra estudar, tava à beira do desespero. o app me dizia exatamente o que fazer naquele dia, sem enrolação. passei em Direito de primeira, ainda nem caiu a ficha</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">32 curtidas</span>
+          <!-- Explicativo -->
+          <div class="bg-black/40 border border-amber-500/20 p-6 rounded-2xl mb-8">
+            <h4 class="text-sm font-bold text-amber-300 mb-2">O que vai acontecer quando faltarem 30 dias?</h4>
+            <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
+              Quando faltarem apenas 30 dias para o ENEM, o WayUp ativará automaticamente um plano especial de reta final. Este modo foi criado para maximizar seu desempenho nas semanas mais importantes antes da prova.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4 text-xs font-semibold text-slate-200">
+              <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Revisões estratégicas</span>
+              <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Questões prioritárias</span>
+              <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Simulados direcionados</span>
+              <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Plano diário de reta final</span>
+              <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Checklist de aprovação</span>
+              <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Revisão intensiva cobradas</span>
             </div>
           </div>
 
-          <!-- T3 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar bg-blue">A</div>
-              <div class="t-info">
-                <h4>Amanda Vieira <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Eng. Computação (ENEM 2024)</span>
-              </div>
-            </div>
-            <p class="t-msg">eu tinha pavor de matemática, evitava até abrir o caderno. o WayUp me dava só 15min por dia de exercício focado, nada mais que isso. no dia da prova resolvi tranquila e hoje ainda me pergunto como consegui</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 1 semana</span>
-              <i data-lucide="check-check" class="t-seen"></i>
-            </div>
-          </div>
-
-          <!-- T4 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #ede9fe; color: #7c3aed;">L</div>
-              <div class="t-info">
-                <h4>Lucas Ferreira <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Administração (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">eu vivia ansioso, achando que tava estudando errado o tempo todo. depois que comecei a usar o WayUp essa sensação sumiu, o app dizia o que fazer e eu só fazia. se eu soubesse antes teria economizado tanta angústia</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">47 curtidas</span>
-            </div>
-          </div>
-
-          <!-- T5 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #e0f2fe; color: #0369a1;">J</div>
-              <div class="t-info">
-                <h4>Júlia Mendes <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Psicologia (ENEM 2024)</span>
-              </div>
-            </div>
-            <p class="t-msg">tentei cursinho presencial e não acompanhava o ritmo da turma, sempre me sentia atrasada. o WayUp se adaptou a mim, não o contrário. estudei bem menos do que imaginava e passei na primeira chamada 🙏</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 5 dias</span>
-              <i data-lucide="check-check" class="t-seen"></i>
-            </div>
-          </div>
-
-          <!-- T6 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #fef3c7; color: #b45309;">R</div>
-              <div class="t-info">
-                <h4>Rafael Costa <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Engenharia Civil (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">o que mais me ajudou foi a revisão espaçada, física e química sempre escapavam da minha cabeça depois de um tempo. o app me avisava na hora certa de revisar. até hoje fico impressionado como isso funcionou</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">28 curtidas</span>
-            </div>
-          </div>
-
-          <!-- T7 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #d1fae5; color: #059669;">B</div>
-              <div class="t-info">
-                <h4>Beatriz Oliveira <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Nutrição (ENEM 2024)</span>
-              </div>
-            </div>
-            <p class="t-msg">minha dificuldade nunca foi estudar, era decidir o que estudar. perdia tanto tempo decidindo que no fim não sobrava tempo pra nada. o WayUp tirou essa decisão de mim e isso mudou tudo pra mim</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 2 dias</span>
-              <i data-lucide="check-check" class="t-seen"></i>
-            </div>
-          </div>
-
-          <!-- T8 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #fee2e2; color: #dc2626;">T</div>
-              <div class="t-info">
-                <h4>Thiago Almeida <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Biomedicina (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">terceira vez fazendo ENEM, nas outras duas eu estudava sem direção nenhuma. dessa vez com o WayUp eu sabia exatamente onde estava e pra onde ia todos os dias. não teve milagre, teve direção</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">63 curtidas</span>
-            </div>
-          </div>
-
-          <!-- T9 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #ede9fe; color: #7c3aed;">C</div>
-              <div class="t-info">
-                <h4>Camila Rocha <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Letras (ENEM 2024)</span>
-              </div>
-            </div>
-            <p class="t-msg">sou super dispersa, nunca segui cronograma nenhum na vida. o WayUp é curto e direto, entro no app, vejo minha tarefa do dia e faço. em 4 meses minha confiança mudou completamente</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 6 dias</span>
-              <i data-lucide="check-check" class="t-seen"></i>
-            </div>
-          </div>
-
-          <!-- T10 -->
-          <div class="t-card">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #ccfbf1; color: #0d9488;">V</div>
-              <div class="t-info">
-                <h4>Vinícius Prado <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Economia (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">confesso que duvidei que um app fosse resolver algo que cronograma em pdf nunca resolveu. em 5 meses saí de 580 pra 740 de média nos simulados. a diferença foi ter direção todo santo dia, não sorte</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">51 curtidas</span>
-            </div>
-          </div>
-
-          <!-- Duplicate set for a seamless infinite loop -->
-          <!-- T1-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar bg-gold">M</div>
-              <div class="t-info">
-                <h4>Mariana Santos <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Medicina (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">gente eu juro que já tinha desistido de fazer cronograma sozinha, sempre dava errado depois de 3 dias 😅 com o WayUp eu só abria o app e seguia, não tinha decisão pra tomar. quando saiu o resultado e vi que passei em Medicina eu chorei o dia inteiro</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 3 dias</span>
-              <i data-lucide="check-check" class="t-seen"></i>
-            </div>
-          </div>
-
-          <!-- T2-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar bg-emerald">G</div>
-              <div class="t-info">
-                <h4>Gabriel Rezende <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Direito (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">trabalhava o dia todo e só sobrava a noite pra estudar, tava à beira do desespero. o app me dizia exatamente o que fazer naquele dia, sem enrolação. passei em Direito de primeira, ainda nem caiu a ficha</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">32 curtidas</span>
-            </div>
-          </div>
-
-          <!-- T3-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar bg-blue">A</div>
-              <div class="t-info">
-                <h4>Amanda Vieira <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Eng. Computação (ENEM 2024)</span>
-              </div>
-            </div>
-            <p class="t-msg">eu tinha pavor de matemática, evitava até abrir o caderno. o WayUp me dava só 15min por dia de exercício focado, nada mais que isso. no dia da prova resolvi tranquila e hoje ainda me pergunto como consegui</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 1 semana</span>
-              <i data-lucide="check-check" class="t-seen"></i>
-            </div>
-          </div>
-
-          <!-- T4-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #ede9fe; color: #7c3aed;">L</div>
-              <div class="t-info">
-                <h4>Lucas Ferreira <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Administração (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">eu vivia ansioso, achando que tava estudando errado o tempo todo. depois que comecei a usar o WayUp essa sensação sumiu, o app dizia o que fazer e eu só fazia. se eu soubesse antes teria economizado tanta angústia</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">47 curtidas</span>
-            </div>
-          </div>
-
-          <!-- T5-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #e0f2fe; color: #0369a1;">J</div>
-              <div class="t-info">
-                <h4>Júlia Mendes <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Psicologia (ENEM 2024)</span>
-              </div>
-            </div>
-            <p class="t-msg">tentei cursinho presencial e não acompanhava o ritmo da turma, sempre me sentia atrasada. o WayUp se adaptou a mim, não o contrário. estudei bem menos do que imaginava e passei na primeira chamada 🙏</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 5 dias</span>
-              <i data-lucide="check-check" class="t-seen"></i>
-            </div>
-          </div>
-
-          <!-- T6-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #fef3c7; color: #b45309;">R</div>
-              <div class="t-info">
-                <h4>Rafael Costa <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Engenharia Civil (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">o que mais me ajudou foi a revisão espaçada, física e química sempre escapavam da minha cabeça depois de um tempo. o app me avisava na hora certa de revisar. até hoje fico impressionado como isso funcionou</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">28 curtidas</span>
-            </div>
-          </div>
-
-          <!-- T7-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #d1fae5; color: #059669;">B</div>
-              <div class="t-info">
-                <h4>Beatriz Oliveira <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Nutrição (ENEM 2024)</span>
-              </div>
-            </div>
-            <p class="t-msg">minha dificuldade nunca foi estudar, era decidir o que estudar. perdia tanto tempo decidindo que no fim não sobrava tempo pra nada. o WayUp tirou essa decisão de mim e isso mudou tudo pra mim</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 2 dias</span>
-              <i data-lucide="check-check" class="t-seen"></i>
-            </div>
-          </div>
-
-          <!-- T8-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #fee2e2; color: #dc2626;">T</div>
-              <div class="t-info">
-                <h4>Thiago Almeida <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Biomedicina (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">terceira vez fazendo ENEM, nas outras duas eu estudava sem direção nenhuma. dessa vez com o WayUp eu sabia exatamente onde estava e pra onde ia todos os dias. não teve milagre, teve direção</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">63 curtidas</span>
-            </div>
-          </div>
-
-          <!-- T9-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #ede9fe; color: #7c3aed;">C</div>
-              <div class="t-info">
-                <h4>Camila Rocha <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovada em Letras (ENEM 2024)</span>
-              </div>
-            </div>
-            <p class="t-msg">sou super dispersa, nunca segui cronograma nenhum na vida. o WayUp é curto e direto, entro no app, vejo minha tarefa do dia e faço. em 4 meses minha confiança mudou completamente</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="message-circle"></i> via WhatsApp</span>
-              <span class="t-time">há 6 dias</span>
-              <i data-lucide="check-check" class="t-seen"></i>
-            </div>
-          </div>
-
-          <!-- T10-dup -->
-          <div class="t-card" aria-hidden="true">
-            <div class="t-card-header">
-              <div class="t-avatar" style="background: #ccfbf1; color: #0d9488;">V</div>
-              <div class="t-info">
-                <h4>Vinícius Prado <i data-lucide="badge-check" class="t-verified"></i></h4>
-                <span class="t-outcome">Aprovado em Economia (ENEM 2025)</span>
-              </div>
-            </div>
-            <p class="t-msg">confesso que duvidei que um app fosse resolver algo que cronograma em pdf nunca resolveu. em 5 meses saí de 580 pra 740 de média nos simulados. a diferença foi ter direção todo santo dia, não sorte</p>
-            <div class="t-meta">
-              <span class="t-channel"><i data-lucide="heart"></i> Comentário</span>
-              <span class="t-time">51 curtidas</span>
-            </div>
-          </div>
-
-        </div><!-- /track -->
-      </div><!-- /marquee-wrapper -->
-    </section>
-
-    <!-- Pricing / Offer Section -->
-    <section class="pricing-section" id="planos">
-      <div class="pricing-bg-glow"></div>
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title text-white">Garanta sua vaga na faculdade hoje</h2>
-          <p class="section-subtitle text-light">Tenha acesso imediato a todo o sistema do WayUp e comece a direcionar seu futuro.</p>
-        </div>
-
-        <div class="pricing-card-container">
-          <div class="pricing-card featured">
-            <div class="badge-featured">Mais Vendido</div>
-            <h3 class="plan-name">Plano de Direção Anual - ENEM</h3>
-            <p class="plan-desc">Acesso completo à plataforma de direção diária inteligente com todas as atualizações.</p>
+          <!-- Preview da Funcionalidade (5 Cards Bloqueados) -->
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Preview da funcionalidade</h4>
             
-            <div class="plan-price-box">
-              <span class="price-original">De R$ 197,00</span>
-              <div class="price-main">
-                <span class="currency">R$</span>
-                <span class="value">54,90</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              
+              <!-- Card 1 -->
+              <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-lg">📚</span>
+                  <span class="text-[10px] font-bold text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 flex items-center gap-1"><i data-lucide="lock" class="w-3 h-3"></i> Bloqueado</span>
+                </div>
+                <h5 class="text-xs font-bold text-white">Revisão Intensiva</h5>
+                <p class="text-[11px] text-slate-400 leading-tight">Revisão dos conteúdos mais importantes do ENEM.</p>
               </div>
-              <span class="price-cash">pagamento único — acesso imediato</span>
-            </div>
 
-            <ul class="plan-features-list">
-              <li><i data-lucide="check"></i> <span><strong>Cronograma Inteligente e Adaptativo</strong></span></li>
-              <li><i data-lucide="check"></i> <span>Assistente do Dia com Metas Direcionadas</span></li>
-              <li><i data-lucide="check"></i> <span>Sistema de Revisão Espaçada Automatizado</span></li>
-              <li><i data-lucide="check"></i> <span>Dashboard de Evolução Completo por Área</span></li>
-              <li><i data-lucide="check"></i> <span>Suporte individualizado por WhatsApp</span></li>
-            </ul>
+              <!-- Card 2 -->
+              <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-lg">📝</span>
+                  <span class="text-[10px] font-bold text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 flex items-center gap-1"><i data-lucide="lock" class="w-3 h-3"></i> Bloqueado</span>
+                </div>
+                <h5 class="text-xs font-bold text-white">Simulados Estratégicos</h5>
+                <p class="text-[11px] text-slate-400 leading-tight">Simulados focados em desempenho real.</p>
+              </div>
 
-            <div class="pricing-cta-wrapper">
-              <a href="https://go.perfectpay.com.br/PPU38CQDT8T" class="btn btn-primary btn-block btn-lg pulse" id="btn-purchase">
-                Quero Minha Aprovação Agora <i data-lucide="arrow-right"></i>
-              </a>
-              <p class="security-text"><i data-lucide="shield-check"></i> Pagamento 100% Seguro. Acesso imediato no e-mail.</p>
+              <!-- Card 3 -->
+              <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-lg">🎯</span>
+                  <span class="text-[10px] font-bold text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 flex items-center gap-1"><i data-lucide="lock" class="w-3 h-3"></i> Bloqueado</span>
+                </div>
+                <h5 class="text-xs font-bold text-white">Questões Prioritárias</h5>
+                <p class="text-[11px] text-slate-400 leading-tight">Seleção dos temas mais recorrentes da prova.</p>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-lg">📖</span>
+                  <span class="text-[10px] font-bold text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 flex items-center gap-1"><i data-lucide="lock" class="w-3 h-3"></i> Bloqueado</span>
+                </div>
+                <h5 class="text-xs font-bold text-white">Revisão Final de Redação</h5>
+                <p class="text-[11px] text-slate-400 leading-tight">Estrutura, repertório e estratégias para maximizar a nota.</p>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-lg">⚡</span>
+                  <span class="text-[10px] font-bold text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 flex items-center gap-1"><i data-lucide="lock" class="w-3 h-3"></i> Bloqueado</span>
+                </div>
+                <h5 class="text-xs font-bold text-white">Plano Diário de Reta Final</h5>
+                <p class="text-[11px] text-slate-400 leading-tight">Cronograma específico para os últimos dias.</p>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <!-- Guarantee Box -->
-        <div class="guarantee-box">
-          <div class="guarantee-icon">
-            <i data-lucide="shield-alert"></i>
+      </div>
+    </section>
+
+    <!-- OFFER SECTION (Preço de R$ 47,00 exclusivo na seção final) -->
+    <section class="py-24 bg-[#000401] relative" id="offer">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">Oferta Especial de Lançamento</span>
+          <h2 class="text-3xl md:text-5xl font-headline font-extrabold text-white tracking-tight">Comece Sua Jornada Inteligente Hoje</h2>
+        </div>
+
+        <div class="relative rounded-3xl border-2 border-emerald-500/50 bg-[#000804] p-8 md:p-12 shadow-[0_0_70px_rgba(16,185,129,0.25)] text-center overflow-hidden">
+          <div class="inline-block bg-gradient-to-r from-emerald-500 to-amber-400 text-black font-extrabold text-xs uppercase tracking-wider px-6 py-1.5 rounded-full mb-6 shadow-md">
+            Desconto Exclusivo Pré-ENEM
           </div>
-          <div class="guarantee-text">
-            <h3>Garantia Incondicional de 7 Dias</h3>
-            <p>Se em 7 dias você achar que o WayUp não é para você ou que não está ajudando nos seus estudos para o ENEM, basta enviar um único e-mail e devolvemos 100% do seu dinheiro. Sem perguntas, sem letrinhas miúdas.</p>
+
+          <h3 class="text-2xl md:text-3xl font-headline font-bold text-white mb-2">Acesso Completo ao WayUp ENEM</h3>
+          <p class="text-slate-400 text-sm mb-8 max-w-md mx-auto">Tudo o que você precisa para direcionar seus estudos e garantir sua vaga na faculdade.</p>
+
+          <div class="bg-emerald-950/40 border border-emerald-500/20 rounded-2xl p-6 mb-8 max-w-md mx-auto">
+            <span class="text-xs text-slate-400 line-through block mb-1">De R$ 197,00 por apenas</span>
+            <div class="flex items-baseline justify-center gap-1 my-1">
+              <span class="text-sm font-bold text-white">12x de</span>
+              <span class="text-5xl md:text-6xl font-headline font-extrabold text-emerald-400 leading-none">R$ 4,70</span>
+            </div>
+            <span class="text-xs font-bold text-amber-300 block mt-2">ou R$ 47,00 à vista no PIX / Cartão</span>
+          </div>
+
+          <ul class="text-xs md:text-sm text-slate-300 space-y-3 max-w-md mx-auto text-left mb-10">
+            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> <span><strong>Acesso Completo à Plataforma WayUp</strong></span></li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> <span>Assistente do Dia com Metas Automáticas</span></li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> <span>Cronograma 100% Adaptativo a Imprevistos</span></li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> <span>Sistema de Revisão Espaçada Automatizada</span></li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> <span>Modo Reta Final ENEM (Últimos 30 Dias)</span></li>
+            <li class="flex items-center gap-2.5 text-emerald-300"><i data-lucide="message-square" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> <span><strong>SUPORTE:</strong> Atendimento Direto pelo WhatsApp</span></li>
+          </ul>
+
+          <a href="https://go.perfectpay.com.br/PPU38CQDT8T" target="_blank" rel="noopener noreferrer" class="btn-glow-primary w-full max-w-md inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full text-lg md:text-xl font-bold text-black bg-gradient-to-r from-emerald-400 via-emerald-300 to-amber-300 hover:scale-105 transition-all shadow-[0_0_40px_rgba(16,185,129,0.6)] mb-4">
+            <span>QUERO MINHA APROVAÇÃO POR R$ 47</span>
+            <i data-lucide="arrow-right" class="w-6 h-6"></i>
+          </a>
+
+          <p class="text-xs text-slate-400 flex items-center justify-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Pagamento 100% Seguro • Acesso Imediato no E-mail
+          </p>
+        </div>
+
+        <div class="mt-8 p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col md:flex-row items-center gap-6">
+          <div class="p-4 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex-shrink-0">
+            <i data-lucide="shield-alert" class="w-8 h-8"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-white mb-1">Garantia Incondicional de 7 Dias</h4>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+              Sua satisfação é garantida. Teste o WayUp por 7 dias inteiros. Se você não sentir que a sua rotina de estudos ficou 10x mais simples e direcionada, mande um único e-mail e devolveremos 100% do valor pago de R$ 47,00 na hora.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 bg-[#021109] border-t border-white/10 relative" id="faq">
+      <div class="container mx-auto px-6 max-w-3xl">
+        <div class="text-center mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">Dúvidas Frequentes</span>
+          <h2 class="text-3xl md:text-4xl font-headline font-bold text-white">Perguntas Frequentes</h2>
+        </div>
+
+        <div class="space-y-4" id="faq-accordion">
+          <div class="faq-item border border-white/10 rounded-2xl overflow-hidden transition-all bg-[#000603]">
+            <button class="faq-trigger w-full p-5 text-left font-bold text-sm md:text-base text-white flex items-center justify-between gap-4">
+              <span>Como recebo o acesso após a compra?</span>
+              <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all px-5 text-xs md:text-sm text-slate-400">
+              <p class="pb-5">O acesso é enviado imediatamente para o seu e-mail cadastrado na hora da compra. Pagamentos por PIX ou Cartão de Crédito são liberados em menos de 1 minuto.</p>
+            </div>
+          </div>
+
+          <div class="faq-item border border-white/10 rounded-2xl overflow-hidden transition-all bg-[#000603]">
+            <button class="faq-trigger w-full p-5 text-left font-bold text-sm md:text-base text-white flex items-center justify-between gap-4">
+              <span>Como funciona o suporte pelo WhatsApp?</span>
+              <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all px-5 text-xs md:text-sm text-slate-400">
+              <p class="pb-5">Você tem um canal direto de atendimento para tirar qualquer dúvida de uso da ferramenta ou organização de estudos diretamente com a equipe do WayUp.</p>
+            </div>
+          </div>
+
+          <div class="faq-item border border-white/10 rounded-2xl overflow-hidden transition-all bg-[#000603]">
+            <button class="faq-trigger w-full p-5 text-left font-bold text-sm md:text-base text-white flex items-center justify-between gap-4">
+              <span>E se eu atrasar um dia de estudos?</span>
+              <i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all px-5 text-xs md:text-sm text-slate-400">
+              <p class="pb-5">O algoritmo do WayUp redistribui os assuntos pendentes automaticamente sem sobrecarregar seus dias seguintes.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section" id="faq">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title">Perguntas Frequentes</h2>
-          <p class="section-subtitle">Tire suas dúvidas antes de começar sua preparação inteligente.</p>
+    <!-- FOOTER -->
+    <footer class="py-12 bg-[#000201] border-t border-white/10 text-slate-400 text-xs">
+      <div class="container mx-auto px-6 max-w-5xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.svg" alt="WayUp Logo" class="w-8 h-8 rounded-lg">
+          <span class="font-headline font-bold text-base text-white">Way<span class="text-[#dcae55]">Up</span></span>
         </div>
-
-        <div class="faq-accordion-wrapper">
-          <!-- Question 1 -->
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Como eu recebo o acesso à ferramenta?</span>
-              <i data-lucide="chevron-down" class="faq-arrow"></i>
-            </button>
-            <div class="faq-content">
-              <p>Assim que o seu pagamento for aprovado, você receberá um e-mail automático contendo seus dados de acesso (login e senha) e o link para a tela de boas-vindas da ferramenta WayUp. Pagamentos via PIX ou Cartão de Crédito são aprovados em menos de 1 minuto.</p>
-            </div>
-          </div>
-
-          <!-- Question 2 -->
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Eu preciso baixar algum aplicativo no celular?</span>
-              <i data-lucide="chevron-down" class="faq-arrow"></i>
-            </button>
-            <div class="faq-content">
-              <p>O WayUp é uma aplicação web de última geração (PWA). Você não precisa gastar a memória do seu celular baixando apps pesados da PlayStore ou AppStore. Você pode acessar pelo celular, tablet ou computador e adicionar à tela inicial como um aplicativo normal com apenas um clique.</p>
-            </div>
-          </div>
-
-          <!-- Question 3 -->
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Consigo usar o WayUp mesmo tendo poucas horas de estudo?</span>
-              <i data-lucide="chevron-down" class="faq-arrow"></i>
-            </button>
-            <div class="faq-content">
-              <p>Sim! Na verdade, ele é ideal para quem tem pouco tempo. O nosso algoritmo prioriza os conteúdos que têm maior relevância e incidência no ENEM, eliminando matérias irrelevantes para garantir que você aproveite ao máximo cada minuto disponível.</p>
-            </div>
-          </div>
-
-          <!-- Question 4 -->
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>O cronograma se adapta se eu atrasar alguma matéria?</span>
-              <i data-lucide="chevron-down" class="faq-arrow"></i>
-            </button>
-            <div class="faq-content">
-              <p>Sim! A ferramenta recalcula e redistribui as matérias pendentes de forma equilibrada até o dia da prova para você não perder nada.</p>
-            </div>
-          </div>
-
-          <!-- Question 5 -->
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>E se eu não gostar da ferramenta?</span>
-              <i data-lucide="chevron-down" class="faq-arrow"></i>
-            </button>
-            <div class="faq-content">
-              <p>Você tem 7 dias de garantia para testar o WayUp. Se durante esse período perceber que a ferramenta não atende às suas expectativas, basta solicitar o reembolso dentro do prazo previsto. Assim, você pode experimentar com tranquilidade e sem riscos.</p>
-            </div>
-          </div>
-        </div>
+        <p class="text-center md:text-left text-slate-500">&copy; 2026 WayUp. Todos os direitos reservados.</p>
       </div>
-    </section>
-
-    <!-- Pre-Footer Conversion Callout -->
-    <section class="conversion-callout">
-      <div class="container text-center">
-        <h2>A melhor hora para organizar seus estudos era ontem.</h2>
-        <p>A segunda melhor é agora.</p>
-        <a href="https://go.perfectpay.com.br/PPU38CQDT8T" class="btn btn-primary btn-lg pulse">
-          Garantir Meu Acesso ao WayUp <i data-lucide="arrow-right"></i>
-        </a>
-      </div>
-    </section>
+    </footer>
   </main>
 
-  <!-- Footer -->
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="logo-wrapper">
-            <svg viewBox="0 0 40 40" width="32" height="32" style="display: inline-block; margin-right: 8px;" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="4" width="32" height="32" rx="6" fill="none" stroke="#dcae55" stroke-width="2"/>
-              <path d="M12 20 L20 28 L28 12" stroke="#00ff66" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="logo-text text-white">Way<span class="highlight">Up</span></span>
-          </div>
-          <p>O sistema de direção diária inteligente que guia você até a vaga dos seus sonhos no ENEM.</p>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2026 WayUp ENEM. Todos os direitos reservados. Feito com foco na sua aprovação.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
+  <!-- Script JS -->
   <script src="script.js"></script>
 </body>
 </html>
